@@ -1,7 +1,26 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
-    <h1 class="text-info display-5">Amateur Aperture</h1>
-    <p class="lead">Delivering stunning photo print solutions</p>
+    
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col-7 col-md-6 my-auto">
+                <h1 class="home-text display-2">Delivering stunning photo print solutions</h1>
+                <div class="my-5">
+                    <h4>
+                        <a href="" class="start-design-button btn btn-lg text-uppercase py-3">Start Designing</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
