@@ -117,3 +117,9 @@ If heroku login doesn't work, use
 ## Code Refactoring
 ----------------
 python3 -m flake8
+
+
+## Making Templates 
+--------------------
+
+mkdir templates
