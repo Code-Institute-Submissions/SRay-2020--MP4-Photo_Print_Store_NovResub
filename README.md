@@ -51,7 +51,7 @@ python3 manage.py runserver (Run project)
 
 python3 manage.py migrate - To run migrations
 
-python3 manage.py createsuperuser - To create admin user 
+python3 manage.py createsuperuser - To create admin user 23rd/09th - sray2021 pword = photoprints1
 
 ## Initial Commit
 
