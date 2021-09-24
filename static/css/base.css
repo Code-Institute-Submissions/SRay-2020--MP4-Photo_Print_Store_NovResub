@@ -182,6 +182,11 @@ text-decoration: wavy;
     border-color: rgb(255, 255, 255)!important;
 }
 
+.new-custom-navbar li a {
+    font-size: 1.25rem;
+    margin-left: -0.25rem;
+}
+
 .home-text {
     margin-top: 13rem;
 }
@@ -203,6 +208,12 @@ text-decoration: wavy;
     font-size: 1.5rem;
     transform: translate( 90px , 0px );
     border-color: rgb(255, 255, 255)!important;
+}
+
+.new-custom-navbar li a {
+    font-size: .75rem;
+    margin-left: 5.5rem;
+    letter-spacing: 2px;
 }
 
 .home-text {
