@@ -35,7 +35,7 @@ padding-left: 1px;
 .new-custom-navbar li a {
 font-size: 1.5rem;
 /* color: #fff; */
-color:rgb(202, 196, 240);
+color:rgb(202, 196, 240)!important;
 margin-left: 2rem;
 margin-right: 2rem;
 letter-spacing: 6px;
@@ -44,7 +44,7 @@ text-decoration: wavy;
 }
 
 .nav-text:hover {
-    color: rgb(134, 119, 228);
+    color:rgb(240, 225, 157)!important;
     transition: 400ms ease-in-out;
 }
 
@@ -60,6 +60,7 @@ text-decoration: wavy;
     letter-spacing: 8px;
     font-family: 'Spartan', sans-serif;
     text-decoration: wavy;
+    margin-top: 15rem;
 }
 
 .start-design-button {
@@ -105,13 +106,9 @@ text-decoration: wavy;
 
 .custom-toggler {
     font-size: 1.5rem;
-    transform: translate( 360px , 5px )
+    transform: translate( 360px , 5px );
+    border-color: rgb(202, 196, 240)!important;
 }
-
-.navbar-toggle-icon {
-    background-color: antiquewhite!important;
-}
-
 
 
 /* from Bulma */
@@ -147,7 +144,20 @@ text-decoration: wavy;
     .container {
       max-width: 80%;
     }
+    .home-text {
+        margin-top: 5rem;
+    }
+
+    .new-custom-navbar li a {
+        font-size: 1.25rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        letter-spacing: 4px;
+        }
+
   }
+
+
   
   /* fixed top navbar only on md and bigger */
   @media (min-width: 992px) {
@@ -170,4 +180,44 @@ text-decoration: wavy;
     font-size: 1.5rem;
     transform: translate( 305px , 1px );
     border-color: rgb(255, 255, 255)!important;
+}
+
+.home-text {
+    margin-top: 13rem;
+}
+
+.start-design-button {
+    transform: translateY( -35px );
+}
+
+}
+
+@media screen and (max-width: 375px) {
+
+.logo-size {
+    margin-top: 1rem;
+    margin-bottom: 1rem; 
+}
+
+.custom-toggler {
+    font-size: 1.5rem;
+    transform: translate( 90px , 0px );
+    border-color: rgb(255, 255, 255)!important;
+}
+
+.home-text {
+    font-size: 1.65rem;
+    line-height: 1.65rem;
+    letter-spacing: 6px;
+    margin-top: 10rem;
+}
+
+.start-design-button {
+    font-size: .75rem;
+    min-width: 6rem;
+    letter-spacing: 2px;
+}
+
+
+
 }
