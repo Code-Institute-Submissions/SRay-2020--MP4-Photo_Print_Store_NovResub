@@ -103,6 +103,16 @@ text-decoration: wavy;
     height: 4px;
 }
 
+.custom-toggler {
+    font-size: 1.5rem;
+    transform: translate( 360px , 5px )
+}
+
+.navbar-toggle-icon {
+    background-color: antiquewhite!important;
+}
+
+
 
 /* from Bulma */
 .icon {
@@ -116,6 +126,21 @@ text-decoration: wavy;
 
 
 /* -- Media Queries */
+
+@media screen and (max-width: 1450px) {
+
+    .home-text {
+        line-height: 5rem;
+        font-size: 4rem;
+        letter-spacing: 8px;
+}
+
+.new-custom-navbar li a {
+    font-size: 1.25rem;
+    margin-left: 1.75rem;
+    margin-right: 1.75rem;
+    letter-spacing: 6px;
+}
 
 /* Larger container on xl screens */
 @media (min-width: 1200px) {
@@ -138,3 +163,11 @@ text-decoration: wavy;
           padding-top: 100px;
       }
   }
+
+  @media screen and (max-width: 768px) {
+
+  .custom-toggler {
+    font-size: 1.5rem;
+    transform: translate( 305px , 1px );
+    border-color: rgb(255, 255, 255)!important;
+}
