@@ -34,7 +34,8 @@ padding-left: 1px;
 
 .new-custom-navbar li a {
 font-size: 1.5rem;
-color: #fff;
+/* color: #fff; */
+color:rgb(202, 196, 240);
 margin-left: 2rem;
 margin-right: 2rem;
 letter-spacing: 6px;
@@ -43,7 +44,7 @@ text-decoration: wavy;
 }
 
 .nav-text:hover {
-    color: rgb(160, 147, 240);
+    color: rgb(134, 119, 228);
     transition: 400ms ease-in-out;
 }
 
@@ -79,26 +80,22 @@ text-decoration: wavy;
 
 .profile-icon i {
     transform: translate( 0px, 3px);
-    /* margin-top: 2px;
-    padding-top: 2px; */
     font-size: 1.5rem;
-    color: #fff;
+    color:rgb(202, 196, 240);
 }
 
 .bag-icon i {
     transform: translate( 0px, 3px);
-    /* margin-top: 2px;
-    padding-top: 2px; */
     font-size: 1.5rem;
-    color: #fff;
+    color:rgb(202, 196, 240);
 }
 
 .profile-icon p {
-    color: #fff;
+    color:rgb(202, 196, 240);
 }
 
 .bag-icon p {
-    color: #fff;
+    color:rgb(202, 196, 240);
 }
 
 .navbar-linebreak {
