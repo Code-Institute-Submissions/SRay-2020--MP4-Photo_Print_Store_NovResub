@@ -152,10 +152,17 @@ text-decoration: wavy;
     text-decoration: underline;
 }
 
+.main-page-title-headings {
+    line-height: 6rem;
+    font-size: 4rem;
+    letter-spacing: 8px;
+    font-family: 'Spartan', sans-serif;
+}
+
 .frames-container {
     height: 80%;
     width: 80%;
-    margin-top: 2.5rem;
+    margin-top: 0;
     margin-left: 11rem;
     margin-right: 2rem;
     margin-bottom: 4rem;
