@@ -15,7 +15,7 @@
     <div class="container-fluid item-view-container">
         <div class="row">
             <div class="col text-center">
-                <h2>Frames</h2>
+                <h2 class="underline">Frames</h2>
             </div>
         </div>
 
@@ -25,32 +25,29 @@
                 <div class="row">
                     
                     {% for frame in frames %}
-                        <div class="col-sm-6 cold-md-6 col-lg-4 col-xl-3">
-                            <div class="card h-100 border-0">
+                        <div class="col-sm-6 cold-md-6 col-lg-4 col-xl-4">
+                            <div class="card border-0 frame-card">
 
                                 {% if frame.image %}
-                                <a href="{% url 'frame_detail' frame.id %}">
+                                <a href="">
                                     <img class="card-img-top img-fluid" src="{{ frame.image.url }}" alt="{{ frame.name }}">
                                 </a>
                                 {% else %}
-                                <a href="{% url 'frame_detail' frame.id %}">
+                                <a href="">
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ frame.name }}">
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">
                                     <p class="mb-0">{{ frame.name }}</p>
                                 </div>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                <div class="card-description pb-0 card-body">
+                                    <p class="mb-0">{{ frame.description }}</p>
+                                </div>
+                                <div class="card-footer pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
                                             <p class="lead mb-0 text-left font-weight-bold">${{ frame.price }}</p>
-                                            <!-- IF ADMIN EDIT/DELETE ITEMS *CRUD -->
-                                            <!-- {% if request.user.is_superuser %}
-                                            <small class="ml-3">
-                                                <a href="{% url 'edit_product' product.id %}">Edit</a>
-                                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                            </small>
-                                            {% endif %} -->
+
                                         </div>
                                     </div>
                                 </div>

@@ -129,21 +129,46 @@ text-decoration: wavy;
 
 
 .overlay {
-    height: 80%;
+    height: 100%;
     width: 80%;
     margin-top: 2.5rem;
     margin-left: 11rem;
     margin-right: 2rem;
     align-content: center;
     position: fixed;
-    background: rgba(241, 235, 223, .65);
+    background: rgba(202, 198, 190, 0.65);
     z-index: -1;
+    bottom:0;
 }
 
 /* Items View */
 
 .item-view-container {
     margin-top: 5rem;
+}
+
+.underline {
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.frames-container {
+    height: 80%;
+    width: 80%;
+    margin-top: 2.5rem;
+    margin-left: 11rem;
+    margin-right: 2rem;
+}
+
+.frame-card {
+    height: 35rem;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+}
+
+
+.frame-card a img {
+    height: 25rem;
 }
 
 /* -- Media Queries */
