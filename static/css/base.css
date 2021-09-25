@@ -121,6 +121,17 @@ text-decoration: wavy;
 }
 
 
+.overlay {
+    height: 80%;
+    width: 80%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: wheat;]
+    z-index: -1;
+}
+
+
 
 /* -- Media Queries */
 
