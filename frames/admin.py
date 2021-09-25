@@ -3,4 +3,16 @@ from .models import PhotoFrame
 
 # Register your models here.
 
-admin.site.register(PhotoFrame)
+class FrameAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'description',
+        'dimensions',
+        'sku',
+        'price',
+        'image',
+    )
+
+    ordering = ('sku',)
+
+admin.site.register(PhotoFrame, FrameAdmin)
