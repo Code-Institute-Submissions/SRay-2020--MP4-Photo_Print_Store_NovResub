@@ -24,29 +24,30 @@
 
                 <div class="row">
                     
-                    {% for frame in frames %}
-                        <div class="col-sm-6 cold-md-6 col-lg-4 col-xl-4">
+                    {% for print in prints %}
+                        <div class="col-1"></div>
+                        <div class="col-10 cold-md-10 col-lg-10 col-xl-10 b-1">
                             <div class="card border-0 frame-card">
 
-                                {% if frame.image %}
+                                {% if print.image %}
                                 <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ frame.image.url }}" alt="{{ frame.name }}">
+                                    <img class="card-img-top img-fluid" src="{{ print.image.url }}" alt="{{ print.name }}">
                                 </a>
                                 {% else %}
                                 <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ frame.name }}">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ print.name }}">
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">
-                                    <p class="mb-0">{{ frame.name }}</p>
+                                    <p class="mb-0">{{ print.name }}</p>
                                 </div>
                                 <div class="card-description pb-0 card-body">
-                                    <p class="mb-0">{{ frame.description }}</p>
+                                    <p class="mb-0">{{ print.description }}</p>
                                 </div>
                                 <div class="card-footer pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">${{ frame.price }}</p>
+                                            <p class="lead mb-0 text-left font-weight-bold">${{ print.price }}</p>
 
                                         </div>
                                     </div>
@@ -54,6 +55,7 @@
 
                             </div>
                         </div>
+                        <div class="col-1"></div>
                     {% endfor %}
 
 
