@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<!-- Use for other page templates, -->
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid item-view-container">
+        <div class="row">
+            <div class="col text-center">
+                <h2 class="underline main-page-title-headings">Prints</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="frames-container col-10">
+
+                <div class="row">
+                    
+                    {% for frame in frames %}
+                        <div class="col-sm-6 cold-md-6 col-lg-4 col-xl-4">
+                            <div class="card border-0 frame-card">
+
+                                {% if frame.image %}
+                                <a href="">
+                                    <img class="card-img-top img-fluid" src="{{ frame.image.url }}" alt="{{ frame.name }}">
+                                </a>
+                                {% else %}
+                                <a href="">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ frame.name }}">
+                                </a>
+                                {% endif %}
+                                <div class="card-body pb-0">
+                                    <p class="mb-0">{{ frame.name }}</p>
+                                </div>
+                                <div class="card-description pb-0 card-body">
+                                    <p class="mb-0">{{ frame.description }}</p>
+                                </div>
+                                <div class="card-footer pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="lead mb-0 text-left font-weight-bold">${{ frame.price }}</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    {% endfor %}
+
+
+                </div>
+
+            </div> 
+        </div>
+    </div>
+
+{% endblock %}

@@ -15,5 +15,4 @@ class PrintAdmin(admin.ModelAdmin):
     ordering = ('sku',)
 
 
-
 admin.site.register(PhotoPrint, PrintAdmin)

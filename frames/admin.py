@@ -13,6 +13,6 @@ class FrameAdmin(admin.ModelAdmin):
         'image',
     )
 
-    ordering = ('sku',)
+    ordering = ('name',)
 
 admin.site.register(PhotoFrame, FrameAdmin)
