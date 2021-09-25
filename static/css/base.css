@@ -178,6 +178,52 @@ text-decoration: wavy;
     height: 25rem;
 }
 
+/* Prints Page */
+
+.prints-container {
+    height: 80%;
+    width: 80%;
+    margin-top: 0;
+    margin-left: 11rem;
+    margin-right: 2rem;
+    margin-bottom: 4rem;
+}
+
+.print-card a img {
+    height: 25rem;
+    width: 38rem;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.print-title {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    font-family: 'Spartan', sans-serif;
+    color: rgb(46, 45, 45);
+    text-align: center;
+}
+
+.print-card {
+ margin-top: 2rem;
+}
+
+.print-price {
+    margin-top: 6rem;
+}
+
+.card-description {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: black;
+    text-align: left;
+}
+
+
 /* -- Media Queries */
 
 @media screen and (max-width: 1450px) {

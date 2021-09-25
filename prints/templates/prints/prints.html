@@ -20,37 +20,46 @@
         </div>
 
         <div class="row">
-            <div class="frames-container col-10">
+            <div class="prints-container col-10">
 
                 <div class="row">
                     
                     {% for print in prints %}
                         <div class="col-1"></div>
                         <div class="col-10 cold-md-10 col-lg-10 col-xl-10 b-1">
-                            <div class="card border-0 frame-card">
+                            <div class="card border-0 print-card">
+                                <!-- New Row-->
+                                <div class="row">
+                                    <!-- Col 1  -->
+                                    <div class="col">
+                                    {% if print.image %}
+                                    <a href="">
+                                        <img class="card-img-top img-fluid" src="{{ print.image.url }}" alt="{{ print.name }}">
+                                    </a>
+                                    {% else %}
+                                    <a href="">
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ print.name }}">
+                                    </a>
+                                    {% endif %}
+                                    </div>
+                                    <!-- Col 2 -->
+                                    <div class="col">
+                                        <div class="card-body pb-0">
+                                            <p class="mb-0 print-title">{{ print.name }}</p>
+                                        </div>
+                                        <div class="card-description pb-0 card-body">
+                                            <p class="mb-0">{{ print.description }}</p>
+                                        </div>
+                                        <div class="card-footer pt-0 border-0 text-left">
+                                            <div class="row">
+                                                <div class="col print-price">
+                                                    <p class="lead mb-0 text-left font-weight-bold">${{ print.price }}</p>
 
-                                {% if print.image %}
-                                <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ print.image.url }}" alt="{{ print.name }}">
-                                </a>
-                                {% else %}
-                                <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ print.name }}">
-                                </a>
-                                {% endif %}
-                                <div class="card-body pb-0">
-                                    <p class="mb-0">{{ print.name }}</p>
-                                </div>
-                                <div class="card-description pb-0 card-body">
-                                    <p class="mb-0">{{ print.description }}</p>
-                                </div>
-                                <div class="card-footer pt-0 border-0 text-left">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">${{ print.price }}</p>
-
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+
                                 </div>
 
                             </div>
