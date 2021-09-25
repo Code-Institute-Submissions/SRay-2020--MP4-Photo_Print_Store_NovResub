@@ -144,7 +144,7 @@ text-decoration: wavy;
 /* Items View */
 
 .item-view-container {
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 .underline {
@@ -158,12 +158,12 @@ text-decoration: wavy;
     margin-top: 2.5rem;
     margin-left: 11rem;
     margin-right: 2rem;
+    margin-bottom: 4rem;
 }
 
 .frame-card {
     height: 35rem;
     margin-top: 2rem;
-    margin-bottom: 6rem;
 }
 
 
