@@ -27,30 +27,47 @@
                     {% for frame in frames %}
                         <div class="col-sm-6 cold-md-6 col-lg-4 col-xl-4">
                             <div class="card border-0 frame-card">
+                                <!-- New Row   -->
+                                <div class="row">
 
-                                {% if frame.image %}
-                                <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ frame.image.url }}" alt="{{ frame.name }}">
-                                </a>
-                                {% else %}
-                                <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ frame.name }}">
-                                </a>
-                                {% endif %}
-                                <div class="card-body pb-0">
-                                    <p class="mb-0">{{ frame.name }}</p>
-                                </div>
-                                <div class="card-description pb-0 card-body">
-                                    <p class="mb-0">{{ frame.description }}</p>
-                                </div>
-                                <div class="card-footer pt-0 border-0 text-left">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">€{{ frame.price }}</p>
-                                        </div>
+                                    <!-- Col 1 -->
+                                    <div class="col">
+                                        {% if frame.image %}
+                                        <a href="">
+                                            <img class="card-img-top img-fluid" src="{{ frame.image.url }}" alt="{{ frame.name }}">
+                                        </a>
+                                        {% else %}
+                                        <a href="">
+                                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ frame.name }}">
+                                        </a>
+                                        {% endif %}
                                     </div>
-                                </div>
+                                    <!-- Col 2 -->
+                                    <div class="col">
+                                        <div class="card-body pb-0">
+                                            <p class="mb-0 frame-title">{{ frame.name }}</p>
+                                        </div>
+                                        <div class="frame-dimensions card-body pb-0">
+                                            <p class="mb-0">{{ frame.dimensions }}</p>
+                                        </div>
+                                        <div class="frame-description pb-0 card-body">
+                                            <p class="mb-0">{{ frame.description }}</p>
+                                        </div>
+                                        <div class="card-footer pt-0 border-0 text-left">
+                                            <div class="row">
+                                                <div class="frame-price col">
+                                                    <p class="lead mb-0 text-left font-weight-bold">€{{ frame.price }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col{% if s %}-12 mt-2{% endif %}">
+                                            <input type="submit" class="btn btn-add-to-bag rounded-0 text-uppercase" value="Add to Bag">
+                                        </div>
+                                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                    </div>
 
+
+                                </div>
                             </div>
                         </div>
                     {% endfor %}
