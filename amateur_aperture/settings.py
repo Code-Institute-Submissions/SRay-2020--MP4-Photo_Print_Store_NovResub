@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'home',
     'prints',
     'frames',
+    'bag',
 ]
 
 MIDDLEWARE = [
