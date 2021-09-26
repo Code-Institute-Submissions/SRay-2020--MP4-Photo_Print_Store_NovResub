@@ -33,11 +33,11 @@
                                     <!-- Col 1  -->
                                     <div class="col">
                                     {% if print.image %}
-                                    <a href="">
+                                    <a href="{% url 'print_detail' print.id %}">
                                         <img class="card-img-top img-fluid" src="{{ print.image.url }}" alt="{{ print.name }}">
                                     </a>
                                     {% else %}
-                                    <a href="">
+                                    <a href="{% url 'print_detail' print.id %}">
                                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ print.name }}">
                                     </a>
                                     {% endif %}

@@ -33,11 +33,11 @@
                                     <!-- Col 1 -->
                                     <div class="col">
                                         {% if frame.image %}
-                                        <a href="">
+                                        <a href="{% url 'frame_detail' frame.id %}">
                                             <img class="card-img-top img-fluid" src="{{ frame.image.url }}" alt="{{ frame.name }}">
                                         </a>
                                         {% else %}
-                                        <a href="">
+                                        <a href="{% url 'frame_detail' frame.id %}">
                                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ frame.name }}">
                                         </a>
                                         {% endif %}
