@@ -76,9 +76,9 @@ python3 manage.py migrate --plan
 python3 manage.py migrate
 
 Loading Data
-python3 manage.py loaddata categories
+python3 manage.py loaddata frames
 
-python3 manage.py loaddata products
+python3 manage.py loaddata prints
 
 ## Quickstart for project
 
