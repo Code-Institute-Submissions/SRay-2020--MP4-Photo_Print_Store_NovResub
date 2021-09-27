@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'prints',
     'frames',
     'bag',
+    'products',
 ]
 
 MIDDLEWARE = [
