@@ -144,7 +144,7 @@ The first of which is 'Spartan'  - This font was chosen for it's elegant and art
 
 <img src="#"> 
 
-The second font used is 'Sora' – This font was chosen because it's a simple, non-distracting font and used for small print where needed.
+The second font used is 'Alata' – This font was chosen because it's a stylish and non-distracting font and used for small print where needed.
 
 <img src="#"> 
 
