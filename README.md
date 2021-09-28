@@ -131,7 +131,7 @@ The database used for this project is Postgres, the relational logic of this typ
 
 Differences between final design and wireframes:
 
-<img src="#"> 
+<img src="media/mp4skeleton.png"> 
 
 ##### Created at the outset of the project to direct the stylistic development. 
 
