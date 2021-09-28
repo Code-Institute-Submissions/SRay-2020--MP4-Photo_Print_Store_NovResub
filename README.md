@@ -4,13 +4,13 @@
 
 ### Using: HTML, CSS, JavaScript, Python, Django, Flask, Bootstrap, PostgreSQL, Stripe
 
-#### Purpose - In this project, you'll build a full-stack site based around business logic used to control a centrally-owned dataset. You will set up an authentication mechanism and provide paid access to the site's data and/or other activities based on the dataset, such as the purchase of a product/service.
+#### Purpose - This project will build a full-stack site based around business logic used to control a centrally-owned dataset. Including an authentication mechanism and the provision paid access to the site's data and/or other activities based on the dataset, such as the purchase of a product/service.
 ---
 
 ## Project Summary:
 ### The goal of this project is to design and create an image printing, e-commerce web based application. This will be done using Python on the Django framework, written in HTML & Css and using JavaScript for further functionality. The main goal of the web app owner will be to provide a platform for customers to upload their image files to be printed (and possibly framed) and then purchased using a secure payment which allows user profiles to persist a shopping bag and return to checkout at a future time. 
 
-### Link to Live Site - ""
+### Link to Live Site - "#"
 
 
 
@@ -64,31 +64,36 @@ The main goal of this project is to create a photograph printing e-commerce stor
 
 Target Audience: Photograpghers, Artists, General public 
 
--  
 
 ### **User stories**
 
-Website user/Customer -
+Website user -
 
 1. As a user I want a visually appealing and smooth website experience
 2. As a user I want to be given visual feedback about my actions 
 3. As a website user I want to be able to navigate the website easily and intuitively
 4. As a user I want a consistent experience, that is the same every time I come back to the website and on any device
-5. As a user I want to have my information protected by a password
-6. As 
-7. As 
-8. As 
-9. As
-10. As
-11. As 
+5. As a user I want to reigister for a profile that is protected by a password
+6. As a user I want to be able to login and logout of my account
+7. As a user I want to personalise my user account
+8. As a user I want to receive email confirmation to register my account
+
+Customer  - 
+
+9. As a customer I want to view products for sale in distinct categories 
+10. As a customer I want to view the particular details of products   
+11. As a customer I want to add products to a shopping bag before checking out   
+12. As a customer I want to change the quantity of the items I add to my bag
+13. As a customer I want to checkout my bag of items in a safe and reputable environment 
+
 
 Website Owner - 
 
-12. As the website owner I want to make money by offering goods to the users
-13. As the website owner I want the users to enjoy using my application
-14. As the website owner I want users to stay on my site for as long as possible
-15. As the website owner I want the users to return to my website
-16. As the website owner I want users to be able to trust the security features that I have implemented
+14. As the website owner I want to make money by offering goods to the users
+15. As the website owner I want the users to enjoy using my application
+16. As the website owner I want users to stay on my site for as long as possible
+17. As the website owner I want the users to return to my website
+18. As the website owner I want users to be able to trust the security and payment features that I have implemented
 
 ### **SCOPE**
 
@@ -96,14 +101,11 @@ This project will be a minimal viable product containing the aspects that are vi
 
 Functional specifications: 
 - Navigation (Top Navbar)
-- 
-- 
-- 
-- 
-- 
-- 
 - Login/Logout features
 - Password protected user accounts
+- Checkout bag for customers (including bag preview)
+- Stripe payments
+- Allow admin to create, edit and delete items
 
 
 Content specifications:
@@ -112,36 +114,26 @@ Content specifications:
 
 ### **STRUCTURE**
 
-The website is laid out over 12 pages which can be broken down into 6 seperate areas. 
+The website is laid out over 7 pages which can be broken down into 6 seperate areas. 
 These areas are:
 
-1. Registration Page ( for new users)
-2. Login/Logout Pages (for existing users to login in using a username and password)
-3. Book Pages - which includes  
-     - Book Library: where all existing books can be viewed as flippable card objects, edited or deleted
-     - Create New Book: which takes user to a page where they can add a new instance of a book object using a form
-     - Edit Book: which takes user to a page where they can edit an existing book
-4. Chapter Pages - which includes  
-     - Chapters List: where all existing chapters can be viewed in a collapsible list, edited or deleted
-     - Create New Chapter: which takes user to a page where they can create a new chapter using a form
-     - Edit Chapter: which takes user to a page where they can edit an existing chapter
-5. Notes - which includes
-      -Add and Edit
-      -Popup modal to display notes
-6. User Profile Page - which includes information about their existing files
+1. Landing Page 
+2. Frames Page 
+3. Prints Page 
+4. Design Page 
+5. Registration Page ( for new users)
+6. Login/Logout Pages (for existing users to login in using a username and password)
 
-The relational logic of the Database being used were considered before the creation of the project and are outlined in the logic chart below which helps to visualise the how the database can be accessed. 
+The database used for this project is Postgres, the relational logic of this type of database was suitable for the purposes of this project.
 
-<img src="static/img/mp3logicchart.png"> 
+<img src="#"> 
 
 
 ### **SKELETON**
 
 Differences between final design and wireframes:
 
-There was some difference between the final design and the wireframes. By adding in a 'flip' function on the 'Books page' more information could be displayed to the user about their existng books and it gives a better feeling of a library. The user 'Profile page' was also enhanced to give users more feedback about their existing files including a return of how many individual chapters and books each author incldued. 
-
-<img src="static/img/mp3wireframe.png"> 
+<img src="#"> 
 
 ##### Created at the outset of the project to direct the stylistic development. 
 
@@ -150,23 +142,23 @@ There was some difference between the final design and the wireframes. By adding
 Typography -
 Two fonts were chosen for this project - 
 
-The first of which is 'Grenze & Gotisch'  - This font was chosen for it's old world gothic printing aesthetic,  it is reminiscent of the font a type setter would have used and git in perfectly with the desired affect.
+The first of which is 'Spartan'  - This font was chosen for it's elegant and artistic aesthetic which gives the user a sense of a classic art print style.
 
-<img src="static/img/mp3samplefont.png"> 
+<img src="#"> 
 
-The second font used is 'Sora' – This font was chosen because it's a simple non distracting font and one that a writer may be used to.
+The second font used is 'Sora' – This font was chosen because it's a simple, non-distracting font and used for small print where needed.
 
-<img src="static/img/mp3sampletext2.png"> 
+<img src="#"> 
 
 Colour scheme -
 
 The author used Coolers.com to create a consistent and visually appealing colour palette for this project. Accessibility was also a concern so the author ensured that all colours of text used were done in a highly contrasting and visually pleasing manner .
 
-<img src="static/img/mp3colourscheme.png"> 
+<img src="#"> 
 
 Images -
 
-The book covers were designed and created by the author to give the impression and feeling of an old library to enhance user expereience. 
+All images were designed and created by the author.
 
 
 ### **FEATURES**
@@ -174,26 +166,25 @@ The book covers were designed and created by the author to give the impression a
 - Media responsiveness on all device sizes
 - Navigation buttons that link to all pages
 - Navigation buttons includes user feedback for click
-- User can create unique login name and password to protect projects
-- User can create, read, update and delete 'Book' objects
-- User can create, read, update and delete 'Chapter' objects
-- User can create and save quick notes
-- Profile page with database query feedback (number of Books and Chatpers created)
+- User can create unique login name and password to protect persistent checkout bag
+- User can upload and preview images for printing in 'Design' page
+- Admin can create, edit and delete saleable items
+- Profile page with database query feedback (previous checkout orders)
 
 ### **FUTURE FEATURES**
 
-- 'Character' creation objects to be included  
-- Darkmode for night time use
-- Further customisation of user 'Profile page' including user profile picture and more feedback
-- Allow users create custom forms or inputs to database to recall (scenes etc.)
-- Give users more control over notes, includng delete and edit
+- Public gallery of ordered images
+- Login from social media accounts
+- 
 
 
 ### **TECHNOLOGIES USED**
 
 Python - For creating main application and majority of functionality
 
-MongoDB - For storing and accessing Database
+Django - As framework applications are built and maintained through
+
+Postgres - For storing and accessing Database
 
 Flask - For wrapping functions and tools (Jinja and Werkzeug)
 
@@ -241,7 +232,7 @@ AmIResponsive (website) - To ensure site is responsive and create mockup
 
 The CSS code was passed through W3C CSS Validator and final version contained no errors. It was also passed through AutoPrefixer Online to parse CSS and add vendor prefixes to ensure validity.
 
-<img src="">
+<img src="#">
 
 The HTML code was passed through W3C HTML Validator and FreeFormatter.com to ensure final version contained no errors.
 
@@ -268,15 +259,14 @@ These changes included -
 1. Performance: 
     • 
 
-%. 
 
 2. Accessibility:
     • 
 
  
-
 3. Best Practices:
      • 
+
 
 4. SEO:
     • 
@@ -296,35 +286,49 @@ Below are a list of the
 
 Tests will be applied to all the pages included in the project, these pages will be referred to as:
 
- 1. Book Page
- 2. Chapter Page
- 3. Book Add Page/Chapter Add Page
- 4. Book Edit Page/Chapter Edit Page
+ 1. Home Page
+ 2. Prints Page
+ 3. Frames Page
+ 4. Design Page
  5. Profile Page
- 6. Note Editor Page
- 7. Login/Register
-
+ 6. Login/Register Page
+ 
 **Test Case I:** Initial Page Load and display
 
-1.  - 
+1. Home Page - 
 - Expected Behaviour: Page will load correctly and promptly, with all elements in place where they should be.
 - Observed Results: When loaded this page loaded without any issue and in a time that was satisfactory.
 - Test Summary: There was no outstanding differences between the expected behaviour of this test and the observed results. 
 
-2.  - 
+2. Prints Page - 
 - Expected Behaviour: Page will load correctly and promptly, with all elements in place where they should be.
 - Observed Results: When loaded this page loaded without any issue and in a time that was satisfactory.
 - Test Summary: There was no outstanding differences between the expected behaviour of this test and the observed results. 
 
-3.  - 
+3. Frames Page - 
 - Expected Behaviour: Page will load correctly and promptly, with all elements in place where they should be.
 - Observed Results: When loaded this page loaded without any issue and in a time that was satisfactory.
 - Test Summary: There was no outstanding differences between the expected behaviour of this test and the observed results. 
 
-**Test Case II:** ""
+4. Design Page - 
+- Expected Behaviour: Page will load correctly and promptly, with all elements in place where they should be.
+- Observed Results: When loaded this page loaded without any issue and in a time that was satisfactory.
+- Test Summary: There was no outstanding differences between the expected behaviour of this test and the observed results. 
+
+5. Profile Page - 
+- Expected Behaviour: Page will load correctly and promptly, with all elements in place where they should be.
+- Observed Results: When loaded this page loaded without any issue and in a time that was satisfactory.
+- Test Summary: There was no outstanding differences between the expected behaviour of this test and the observed results. 
+
+6. Login/Register Page - 
+- Expected Behaviour: Page will load correctly and promptly, with all elements in place where they should be.
+- Observed Results: When loaded this page loaded without any issue and in a time that was satisfactory.
+- Test Summary: There was no outstanding differences between the expected behaviour of this test and the observed results. 
+
+**Test Case II:** 
 
 
-**Test Case V:** Error 404 Page
+**Test Case III:** Error 404 Page
 
 Error 404 Page - 
 - Expected Behaviour: If a user inputs an incorrect HTML the custom 'Error 404' HTML page should be displayed, including navigation back to other pages of website. 
@@ -352,48 +356,68 @@ Though the sote was developed through Google Chrome, after it had been deployed 
 
 **Website user -**
 
-1. 
+Website user -
+
+1. As a user I want a visually appealing and smooth website experience
+
+- 
+2. As a user I want to be given visual feedback about my actions 
+
 - 
 
-2. 
+3. As a website user I want to be able to navigate the website easily and intuitively
+
+- 
+4. As a user I want a consistent experience, that is the same every time I come back to the website and on any device
+
+- 
+5. As a user I want to reigister for a profile that is protected by a password
+
+- 
+6. As a user I want to be able to login and logout of my account
+
+- 
+7. As a user I want to personalise my user account
+
+- 
+8. As a user I want to receive email confirmation to register my account
+
+- 
+Customer  - 
+
+9. As a customer I want to view products for sale in distinct categories
+
+- 
+10. As a customer I want to view the particular details of products
+
+- 
+11. As a customer I want to add products to a shopping bag before checking out
+
+-   
+12. As a customer I want to change the quantity of the items I add to my bag
+
+- 
+13. As a customer I want to checkout my bag of items in a safe and reputable environment
+
 - 
 
-3. 
+Website Owner - 
+
+14. As the website owner I want to make money by offering goods to the users
+
 - 
+15. As the website owner I want the users to enjoy using my application
 
-4. 
 - 
+16. As the website owner I want users to stay on my site for as long as possible
 
-5. 
 - 
+17. As the website owner I want the users to return to my website
 
-6. 
 - 
+18. As the website owner I want users to be able to trust the security and payment features that I have implemented
 
-7. 
 - 
-
-8. 
-- 
-
-9. 
-- 
-
-10. 
-- 
-
-11. 
-- 
-
-12. 
-- 
-
-13. 
-
-14. 
-
-15. 
-
 ### **BUG FIXES**
 
 
@@ -421,14 +445,7 @@ To create a clone of this project you can access it through the link on the Git 
 
 If you want to run this clone on a local machine you would go to the 'Clone' section on GitHub and click the url link in the HTTPS section. When you download and unzip these files to your desktop you can then open them in your own IDE shell and save them as a new directory. 
 
-Requirements needed to initialise project -
-
-- pip3 install Flask
-- pip3 install PyMongo
-- pip3 install dnspython
-- pip3 install flask-pymongo
-
-All additional requirements can be found i the 'requirements.txt' file. 
+All requirements needed to initialise project can be found i the 'requirements.txt' file. 
 
 ### **CREDITS**
 
