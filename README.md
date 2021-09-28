@@ -126,8 +126,6 @@ These areas are:
 
 The database used for this project is Postgres, the relational logic of this type of database was suitable for the purposes of this project.
 
-<img src="#"> 
-
 
 ### **SKELETON**
 
