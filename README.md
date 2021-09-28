@@ -140,13 +140,13 @@ Differences between final design and wireframes:
 Typography -
 Two fonts were chosen for this project - 
 
-The first of which is 'Spartan'  - This font was chosen for it's elegant and artistic aesthetic which gives the user a sense of a classic art print style.
+The first of which is 'Spartan' - This font was chosen for it's elegant and artistic aesthetic which gives the user a sense of a classic art print style.
 
-<img src="#"> 
+<img src="media/mp4fontspartan"> 
 
 The second font used is 'Alata' – This font was chosen because it's a stylish and non-distracting font and used for small print where needed.
 
-<img src="#"> 
+<img src="media/mp4fontalata"> 
 
 Colour scheme -
 
@@ -171,16 +171,16 @@ All images were designed and created by the author.
 
 ### **FUTURE FEATURES**
 
-- Public gallery of ordered images
+- Public gallery of previously ordered images
 - Login from social media accounts
-- 
+-
 
 
 ### **TECHNOLOGIES USED**
 
 Python - For creating main application and majority of functionality
 
-Django - As framework applications are built and maintained through
+Django - As the framework applications are built and maintained through
 
 Postgres - For storing and accessing Database
 
