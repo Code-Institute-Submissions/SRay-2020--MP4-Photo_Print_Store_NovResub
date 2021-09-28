@@ -8,7 +8,7 @@
 ---
 
 ## Project Summary:
-### ""
+### The goal of this project is to design and create an image printing, e-commerce web based application. This will be done using Python on the Django framework, written in HTML & Css and using JavaScript for further functionality. The main goal of the web app owner will be to provide a platform for customers to upload their image files to be printed (and possibly framed) and then purchased using a secure payment which allows user profiles to persist a shopping bag and return to checkout at a future time. 
 
 ### Link to Live Site - ""
 
