@@ -144,6 +144,24 @@ text-decoration: wavy;
 
 /* Items View */
 
+.item-view-overlay {
+    height: 100%;
+    width: 80%;
+    margin-top: 2.5rem;
+    margin-left: 11rem;
+    margin-right: 2rem;
+    align-content: center;
+    position: fixed;
+    background: rgb(255, 255, 255);
+    z-index: -1;
+    bottom:0;
+}
+
+.item-view-container {
+    background: rgba(61, 61, 61, 0.65);
+    z-index: -10;
+}
+
 .item-view-container {
     background: rgba(61, 61, 61, 0.65);
     z-index: -10;
