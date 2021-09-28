@@ -152,7 +152,7 @@ Colour scheme -
 
 The author used Coolers.com to create a consistent and visually appealing colour palette for this project. Accessibility was also a concern so the author ensured that all colours of text used were done in a highly contrasting and visually pleasing manner .
 
-<img src="#"> 
+<img src="media/mp4colourscheme.png"> 
 
 Images -
 
