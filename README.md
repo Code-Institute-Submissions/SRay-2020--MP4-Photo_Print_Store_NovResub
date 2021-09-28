@@ -142,11 +142,11 @@ Two fonts were chosen for this project -
 
 The first of which is 'Spartan' - This font was chosen for it's elegant and artistic aesthetic which gives the user a sense of a classic art print style.
 
-<img src="media/mp4fontspartan"> 
+<img src="media/mp4fontspartan.png"> 
 
 The second font used is 'Alata' – This font was chosen because it's a stylish and non-distracting font and used for small print where needed.
 
-<img src="media/mp4fontalata"> 
+<img src="media/mp4fontalata.png"> 
 
 Colour scheme -
 
