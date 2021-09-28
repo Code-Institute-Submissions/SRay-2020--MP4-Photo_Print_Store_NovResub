@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import PhotoFrame
+from .models import Product
 
 # Create your views here.
 
@@ -23,3 +23,13 @@ def frame_detail(request, frame_id):
     }
 
     return render(request, 'frames/frame_detail.html', context)
+
+
+def all_products(request):
+    products = Products.objects.all()
+
+    context = {
+        'products': products,
+    }
+
+    return render(request, 'products/products.html', context)

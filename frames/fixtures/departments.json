@@ -1,0 +1,1 @@
+[{"pk": 1, "model": "products.department", "fields": {"name": "photo_prints", "display_name": "Prints"}}, {"pk": 2, "model": "products.department", "fields": {"name": "photo_frames", "display_name": "Frames"}}]

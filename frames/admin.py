@@ -1,18 +1,25 @@
 from django.contrib import admin
-from .models import PhotoFrame
+from .models import Product, Department
 
 # Register your models here.
 
-class FrameAdmin(admin.ModelAdmin):
+class ProductAdmin(admin.ModelAdmin):
     list_display = (
-        'name',
-        'description',
-        'dimensions',
         'sku',
+        'name',
+        'department',
         'price',
+        'description',
         'image',
     )
 
-    ordering = ('name',)
+    ordering = ('sku',)
 
-admin.site.register(PhotoFrame, FrameAdmin)
+class DepartmentAdmin(admin.ModelAdmin):
+    list_display = (
+        'display_name',
+        'name',
+    )
+
+admin.site.register(Product, ProductAdmin)
+admin.site.register(Department, DepartmentAdmin)
