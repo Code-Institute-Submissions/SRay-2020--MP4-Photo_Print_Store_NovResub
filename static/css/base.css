@@ -444,6 +444,21 @@ font-weight: 600;
     letter-spacing: 6px;
 }
 
+.quant-form a {
+    cursor: pointer!important;
+}
+
+
+.update-link  {
+    cursor: pointer!important;
+    padding-right: 1rem;
+}
+
+.remove-item {
+    cursor: pointer!important;
+    padding-left: 1rem;
+}
+
 /* Larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
