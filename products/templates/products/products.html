@@ -42,11 +42,11 @@
                                         <!-- Col 1  -->
                                         <div class="col">
                                         {% if product.image %}
-                                        <a href="{% url 'product_detail' product.id %}">
+                                        <a href="{% url 'product_detail_prints' product.id %}">
                                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                                         </a>
                                         {% else %}
-                                        <a href="{% url 'product_detail' product.id %}">
+                                        <a href="{% url 'product_detail_prints' product.id %}">
                                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                         </a>
                                         {% endif %}
@@ -54,7 +54,7 @@
                                         <!-- Col 2 -->
                                         <div class="col">
                                             <div class="card-body pb-0">
-                                                <p class="mb-0 print-title">{{ product.name }}</p>
+                                                <p class="mb-0 print-title">"{{ product.name }}"</p>
                                             </div>
                                             <div class="card-description pb-0 card-body">
                                                 <p class="mb-0">{{ product.description }}</p>
