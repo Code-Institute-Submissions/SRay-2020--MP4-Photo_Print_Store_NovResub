@@ -158,14 +158,18 @@ text-decoration: wavy;
 }
 
 .item-view-container {
-    background: rgba(61, 61, 61, 0.65);
+    background: rgba(119, 119, 119, 0.95);
     z-index: -10;
+    height: 100%;
 }
 
-.item-view-container {
-    background: rgba(61, 61, 61, 0.65);
+.item-detail-view-container {
+    background: rgba(235, 233, 233, 0.95);
     z-index: -10;
+    height: 110%;
 }
+
+
 
 .underline {
     text-transform: uppercase;
@@ -180,6 +184,45 @@ text-decoration: wavy;
     font-family: 'Spartan', sans-serif;
     z-index: 1;
 }
+
+/* Product Details Page */
+
+.product-detail-container {
+   
+
+}
+
+.product-detail-image-col {
+    
+}
+
+.product-detail-info-col {
+
+}
+
+.product-detail-info-col .frame-title{
+margin-top: 1rem;
+margin-right: 6rem;
+font-size: 2rem;
+font-weight: 600;
+}
+
+.quantity-row {
+    margin-left: 15rem;
+}
+
+.quantity-title {
+    margin-left: 2.5rem;
+    text-align: center;
+}
+
+.detail-image-view {
+    height: 23rem;
+    width: 17rem;
+    transform: translate( 160px, 16px );
+}
+
+/* Frames Page */
 
 .frames-container {
     height: 80%;
