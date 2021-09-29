@@ -11,7 +11,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
+<div class="light-overlay"></div>
 <div class="container">
 
     <div class="row">
@@ -38,10 +38,11 @@
                             </div>
                             <div class="col-12 col-sm-6 mb-2">
                                 {% include "bag/product-info.html" %}
+
                             </div>
                             <div class="col-12 col-sm-6 order-sm-last">
                                 <p class="my-0">Price Each: €{{ item.product.price }}</p>
-                                <p><strong>Subtotal: </strong></p>
+                                <p><strong>Subtotal: </strong>€?</p>
                             </div>
                             <div class="col-12 col-sm-6">
                                 {% include "bag/quantity-form.html" %}
@@ -57,13 +58,14 @@
                 </div>
                 <div class="table-responsive rounded d-none d-md-block">
                     <table class="table table-sm table-borderless">
-                        <thead class="text-black">
+                        <thead class="text-black bag-header">
                             <tr>
-                                <th scope="col">Product Info</th>
+                                
                                 <th scope="col"></th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Qty</th>
-                                <th scope="col">Subtotal</th>
+                                <th scope="col">Product Info</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col"></th>
+                                <th scope="col" class="subtotal-bag-title">Subtotal</th>
                             </tr>
                         </thead>
 
@@ -72,27 +74,25 @@
                                 <td class="p-3 w-25">
                                     {% include "bag/product-image.html" %}
                                 </td>
-                                <td class="py-3">
+                                <td class="w-25 bag-content">
                                     {% include "bag/product-info.html" %}
-                                </td>
-                                <td class="py-3">
                                     <p class="my-0">${{ item.product.price }}</p>
                                 </td>
-                                <td class="py-3 w-25">
+                                <td class="bag-content quant-form">
                                     {% include "bag/quantity-form.html" %}
                                 </td>
-                                <td class="py-3">
+                                <td class="bag-content">
                                     <p class="my-0"></p>
                                 </td>
                             </tr>
                         {% endfor %}
                         <tr>
-                            <td colspan="5" class="pt-5 text-right">
+                            <td colspan="5" class="pt-5 text-right bag-total-align-right">
                                 {% include "bag/bag-total.html" %}
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="5" class="text-right">
+                            <td colspan="5" class="text-right bag-total-align-right">
                                 {% include "bag/checkout-buttons.html" %}
                             </td>
                         </tr>
