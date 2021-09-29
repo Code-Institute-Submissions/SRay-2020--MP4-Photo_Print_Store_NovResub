@@ -52,7 +52,7 @@
                                     </div>
                                  </div>
                             </div>
-                            <form class="form" action="#" method="POST">
+                            <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                                 {% csrf_token %}
                                 <div class="form-row quantity-row my-auto ">
                                     <div class="col-12 d-flex justify">

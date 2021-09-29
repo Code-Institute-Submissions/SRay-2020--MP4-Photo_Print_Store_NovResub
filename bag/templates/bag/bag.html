@@ -21,7 +21,7 @@
     </div> 
 
 
-    <!-- <div class="row">
+    <div class="row">
         <div class="col">
             {% if bag_items %}
                 <div class="d-block d-md-none">
@@ -41,7 +41,7 @@
                             </div>
                             <div class="col-12 col-sm-6 order-sm-last">
                                 <p class="my-0">Price Each: €{{ item.product.price }}</p>
-                                <p><strong>Subtotal: </strong>${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                <p><strong>Subtotal: </strong></p>
                             </div>
                             <div class="col-12 col-sm-6">
                                 {% include "bag/quantity-form.html" %}
@@ -82,7 +82,7 @@
                                     {% include "bag/quantity-form.html" %}
                                 </td>
                                 <td class="py-3">
-                                    <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                    <p class="my-0"></p>
                                 </td>
                             </tr>
                         {% endfor %}
@@ -108,7 +108,7 @@
                 </a>
             {% endif %}
         </div>
-    </div> -->
+    </div>
 
 
 

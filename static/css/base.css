@@ -241,7 +241,7 @@ font-weight: 600;
 .detail-image-view-prints {
     height: 17rem;
     width: 23rem;
-    transform: translate( 160px, 16px );
+    transform: translate( 5px, 16px );
 }
 
 /* Frames Page */
