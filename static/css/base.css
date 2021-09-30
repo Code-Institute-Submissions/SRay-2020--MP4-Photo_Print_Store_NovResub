@@ -187,7 +187,6 @@ text-decoration: wavy;
 }
 
 
-
 .underline {
     text-transform: uppercase;
     text-decoration: underline;
@@ -438,6 +437,12 @@ font-weight: 600;
 .secure-checkout-button:hover {
     color: rgb(226, 205, 112);
     transition: 800ms ease-in-out;
+}
+
+.subtotal-price {
+    padding-left: 10.5rem!important;
+    font-weight: 600;
+    font-size: 1.5rem;
 }
 
 /* Design Page */

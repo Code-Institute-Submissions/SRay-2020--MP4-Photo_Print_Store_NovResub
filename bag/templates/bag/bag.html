@@ -81,8 +81,8 @@
                                 <td class="bag-content quant-form">
                                     {% include "bag/quantity-form.html" %}
                                 </td>
-                                <td class="bag-content">
-                                    <p class="my-0">{{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                <td class="bag-content subtotal-price">
+                                    <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                 </td>
                             </tr>
                         {% endfor %}
