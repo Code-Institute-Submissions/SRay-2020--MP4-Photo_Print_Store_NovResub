@@ -510,7 +510,11 @@ font-weight: 600;
 
 
 
+/* Profile Authorisations */
 
+.allauth-form-inner-content {
+    padding-left: 10rem;
+}
 
 
 
