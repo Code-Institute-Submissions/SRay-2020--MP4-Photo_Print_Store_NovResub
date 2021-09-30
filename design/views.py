@@ -3,10 +3,12 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
 
-from .models import Product, Category
+from .models import Product, Department
 from .forms import ProductForm
 
 # Create your views here.
+
+
 
 def add_design(request):
 

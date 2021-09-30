@@ -68,9 +68,13 @@ text-decoration: wavy;
 }
 
 .toast-header button {
-    text-align: right;
-    right: 0;
     margin-left: 15rem;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* Header Container */
