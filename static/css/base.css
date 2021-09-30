@@ -164,7 +164,7 @@ text-decoration: wavy;
     margin-right: 2rem;
     align-content: center;
     position: fixed;
-    background: rgba(252, 252, 252, 0.65);
+    background: rgba(167, 166, 166, 0.85);
     z-index: -1;
     bottom:0;
 }
@@ -179,13 +179,13 @@ text-decoration: wavy;
     margin-right: 2rem;
     align-content: center;
     position: fixed;
-    background: rgb(255, 255, 255);
+    background: rgb(151, 151, 151);
     z-index: -1;
     bottom:0;
 }
 
 .item-view-container {
-    background: rgba(119, 119, 119, 0.95);
+    /* background: rgba(119, 119, 119, 0.95); */
     z-index: -10;
     height: 100%;
 }
