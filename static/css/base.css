@@ -67,6 +67,12 @@ text-decoration: wavy;
     height: 2px;
 }
 
+.toast-header button {
+    text-align: right;
+    right: 0;
+    margin-left: 15rem;
+}
+
 /* Header Container */
 
 .header-container {
