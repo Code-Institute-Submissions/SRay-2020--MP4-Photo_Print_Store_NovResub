@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'frames',
     'bag',
     'products',
+    'design',
 ]
 
 MIDDLEWARE = [

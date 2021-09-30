@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
 <!-- Use for other page templates, -->
@@ -64,7 +65,6 @@
                                 <th scope="col"></th>
                                 <th scope="col">Product Info</th>
                                 <th scope="col">Quantity</th>
-                                <th scope="col"></th>
                                 <th scope="col" class="subtotal-bag-title">Subtotal</th>
                             </tr>
                         </thead>
@@ -82,7 +82,7 @@
                                     {% include "bag/quantity-form.html" %}
                                 </td>
                                 <td class="bag-content">
-                                    <p class="my-0"></p>
+                                    <p class="my-0">{{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                 </td>
                             </tr>
                         {% endfor %}

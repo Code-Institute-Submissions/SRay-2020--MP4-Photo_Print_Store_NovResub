@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<!-- Use for other page templates, -->
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<!-- Background Overlay -->
+    <div class="light-overlay"></div>
+<!-- Main Container -->
+    <div class="container-fluid item-view-container">
+<!-- Title Row -->
+        <div class="row">
+            <div class="col text-center">
+                <h2 class="underline main-page-title-headings">Design</h2>
+            </div>
+        </div>
+
+<!-- Sample form add product -->
+<form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% for field in form %}
+        {% if field.name != 'image' %}
+            {{ field | as_crispy_field }}
+        {% else %}
+            {{ field }}
+        {% endif %}
+    {% endfor %}
+    <div class="text-right">
+        <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
+        <button class="btn btn-black rounded-0" type="submit">Add Product</button>
+    </div>
+</form>
+<!-- End form -->
+
+<!-- Image Uploader and Explainer Text -->
+        <div class="row">
+<!-- Image Col  -->
+            <div class="frames-container col-6">
+                <div class="row">
+                    <br><div class="container">
+                            <div class="row">
+                                <div class="col-sm-2 imgUp">
+                                <div class="imagePreview"></div>
+                                    <label class="btn btn-primary">
+                                    Upload<input type="file" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
+                                    </label>
+                                </div><!-- col-2 -->
+                            <i class="fa fa-plus imgAdd"></i>
+                        </div><!-- row -->
+                      </div><!-- container -->
+                </div>
+            </div> 
+<!-- Text Col -->
+            <div class="frames-container col-6">
+                <div class="row">
+                    <p>Please use the uploader on the left of the page to upload the image you would like to be printed. 
+                        Our graphic designer will edit the image to the correct ratio for the print size you select. 
+                        We recommend you upload the file in a high definition as possible (300px per inch)</p>
+                </div>
+            </div> 
+
+        </div>
+<!-- End Container  -->
+    </div>
+
+{% endblock %}
+
+{% postloadjs block %}
+{% block super %}
+<script type="text/javascript">
+    $(".imgAdd").click(function(){
+        $(this).closest(".row").find('.imgAdd').before('<div class="col-sm-2 imgUp"><div class="imagePreview"></div><label class="btn btn-primary">Upload<input type="file" class="uploadFile img" value="Upload Photo" style="width:0px;height:0px;overflow:hidden;"></label><i class="fa fa-times del"></i></div>');
+    });
+    $(document).on("click", "i.del" , function() {
+        $(this).parent().remove();
+    });
+    $(function() {
+        $(document).on("change",".uploadFile", function()
+        {
+                var uploadFile = $(this);
+            var files = !!this.files ? this.files : [];
+            if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
+    
+            if (/^image/.test( files[0].type)){ // only image file
+                var reader = new FileReader(); // instance of the FileReader
+                reader.readAsDataURL(files[0]); // read the local file
+    
+                reader.onloadend = function(){ // set image data as background of div
+                    //alert(uploadFile.closest(".upimage").find('.imagePreview').length);
+    uploadFile.closest(".imgUp").find('.imagePreview').css("background-image", "url("+this.result+")");
+                }
+            }
+            
+        });
+    });
+</script>
+{% endblock %}
