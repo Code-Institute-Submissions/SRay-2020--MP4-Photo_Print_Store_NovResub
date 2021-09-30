@@ -56,7 +56,7 @@ select option[value=""] {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(23, 162, 184, .85);
+    background: rgba(190, 142, 223, 0.85);
     z-index: 9999;
 }
 
@@ -66,4 +66,16 @@ select option[value=""] {
     justify-content: center;
     margin: 0;
     height: 100%;
+}
+
+/* Checkout Success */
+
+.checkout-success-container {
+  padding-left: 10rem!important;
+}
+
+.checkout-success-bottom{
+  padding-top: 3rem;
+  padding-left: 28rem!important;
+  
 }
