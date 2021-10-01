@@ -1,0 +1,1 @@
+web: gunicorn amateur_aperture.wsgi:application
