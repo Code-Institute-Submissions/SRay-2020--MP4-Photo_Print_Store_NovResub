@@ -595,6 +595,8 @@ If heroku login doesn't work, use
 
 'heroku login -i'
 
+heroku git:remote -a 'yourapp'
+
 'git push -u heroku' - *** No master!
 
 ## Code Refactoring
