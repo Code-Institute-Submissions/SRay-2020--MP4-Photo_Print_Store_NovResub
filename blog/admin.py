@@ -1,12 +1,13 @@
 from django.contrib import admin
-from .models import Post,Comment
+from .models import Post1, Comment
 
+
+@admin.register(Post1)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'slug', 'created_on')
-    list_filter = ("created_on",)
-    prepopulated_fields = {'slug': ('title',)}
+    list_display = ('title', 'author', 'created_on', 'status')
 
 
+@admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('name', 'body', 'post', 'created_on', 'active')
     list_filter = ('active', 'created_on')

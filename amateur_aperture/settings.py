@@ -10,11 +10,19 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-# from pathlib import Path
+from pathlib import Path
 import os
 import dj_database_url
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+if os.path.exists("env.py"):
+    import env
+
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # TEMPLATES_DIRS = os.path.join(BASE_DIR,'templates')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -60,7 +68,6 @@ INSTALLED_APPS = [
     'profiles',
     'crispy_forms',
     'blog',
-
 ]
 
 MIDDLEWARE = [
@@ -134,9 +141,9 @@ WSGI_APPLICATION = 'amateur_aperture.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default':dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-else:    
+else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -193,11 +200,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
- 
-
 if 'USE_AWS' in os.environ:
 
-     # Cache control
+    # Cache control
     AWS_S3_OBJECT_PARAMETERS = {
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',

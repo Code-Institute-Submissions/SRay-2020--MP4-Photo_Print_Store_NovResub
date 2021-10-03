@@ -18,7 +18,21 @@
 
             <div class="col-2"></div>
 
-            <div class="col-8"></div>
+            <div class="col-8">
+
+                {% for post in post_list %}
+                <div class="card">
+                  <div class="card-body">
+                    <h2 class="card-title text-center">{{ post.title }}</h2>
+                    <p class="card-text">{{ post.author }} | {{ post.created_on}} </p>
+                    <p class="card-text">{{post.content|safe|slice:":200" }}</p>
+                    <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary order-btn">Read More &rarr;</a>
+                  </div>
+                </div>
+              {% endfor %}
+
+
+            </div>
 
             <div class="col-2"></div>
             

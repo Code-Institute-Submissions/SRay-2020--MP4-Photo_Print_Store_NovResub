@@ -1,22 +1,19 @@
 from django.views import generic
-from .models import Post
+from django.views.generic.list import ListView
+from .models import Post1
 from .forms import CommentForm
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
 
 
 class PostList(generic.ListView):
-    queryset = Post.objects.filter(created_on__lte=timezone.now()).order_by('-created_on')
+    queryset = Post1.objects.filter(status=1).order_by("-created_on")
     template_name = "blog.html"
-
-# def post_list(request):
-#     return render(request, 'blog/blog.html')    
-
 
 
 def post_detail(request, slug):
     template_name = "post_detail.html"
-    post = get_object_or_404(Post, slug=slug)
+    post = get_object_or_404(Post1, slug=slug)
     comments = post.comments.filter(active=True).order_by("-created_on")
     new_comment = None
 
