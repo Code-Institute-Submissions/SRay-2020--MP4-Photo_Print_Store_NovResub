@@ -21,51 +21,17 @@
                     <div class="row pt-4">
     
                 <!-- Col 1 -->
+                
                         <div class="col col-4 product-detail-image-col">
-                            {% if request.get_full_path == '/products/10/' %}
-                                {% if product.image %}
-                                <a href="{{ product.image.url }}" target="_blank">
-                                    <img class="card-img-top img-fluid  print-image-preview" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                </a>
-                                {% else %}
-                                <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                </a>
-                                {% endif %}
-                            <!-- Elif 1 -->
-                            {% elif request.get_full_path == '/products/11/' %}
-                                {% if product.image %}
-                                    <a href="{{ product.image.url }}" target="_blank">
-                                        <img class="card-img-top img-fluid  print-image-preview" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                    </a>
-                                    {% else %}
-                                    <a href="">
-                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                    </a>
-                                    {% endif %}
-                            <!-- Elif 2 -->
-                            {% elif request.get_full_path == '/products/12/' %}
-                                {% if product.image %}
-                                    <a href="{{ product.image.url }}" target="_blank">
-                                        <img class="card-img-top img-fluid  print-image-preview" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                    </a>
-                                    {% else %}
-                                    <a href="">
-                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                    </a>
-                                    {% endif %}
-                            <!-- Else Frames -->        
+                            {% if product.image %}
+                            <a href="{{ product.image.url }}" target="_blank">
+                                <img class="card-img-top img-fluid detail-image-view" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            </a>
                             {% else %}
-                                {% if product.image %}
-                                <a href="{{ product.image.url }}" target="_blank">
-                                    <img class="card-img-top img-fluid detail-image-view" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                </a>
-                                {% else %}
-                                <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                </a>
-                                {% endif %}
-                            {% endif%}
+                            <a href="">
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                            </a>
+                            {% endif %}
                         </div>
 
                 <!-- Col 2 -->

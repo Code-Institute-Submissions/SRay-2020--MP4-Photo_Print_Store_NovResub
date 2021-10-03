@@ -213,6 +213,12 @@ text-decoration: wavy;
 
 /* Product Details Page */
 
+.print-image-preview {
+    height: 20rem;
+    width: 26rem;
+    transform: translate( 20px, 16px );
+}
+
 .product-detail-container {
    
 

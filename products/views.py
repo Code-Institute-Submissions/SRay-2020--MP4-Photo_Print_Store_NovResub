@@ -46,10 +46,6 @@ def all_frames(request):
 
 
 
-
-
-
-
 def product_detail(request, product_id):
   
     product = get_object_or_404(Product, pk=product_id)
@@ -60,15 +56,18 @@ def product_detail(request, product_id):
 
     return render(request, 'products/product_detail.html', context)
 
+
 def product_detail_prints(request, product_id):
   
-    product = get_object_or_404(Product, pk=product_id)
-
+    prints = Product.objects.filter(department="1")
+    
     context = {
-        'product': product,
+        'prints': prints,
     }
 
     return render(request, 'products/product_detail_prints.html', context)
+
+
 
 @login_required
 def add_product(request):

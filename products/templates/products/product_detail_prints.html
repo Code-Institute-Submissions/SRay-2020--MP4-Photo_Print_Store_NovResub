@@ -22,7 +22,8 @@
     
                 <!-- Col 1 -->
                 
-                        <div class="col col-4 product-detail-image-col">
+                        <p>Print Details Page</p>
+                        <div class="col col-6 product-detail-image-col">
                             {% if product.image %}
                             <a href="{{ product.image.url }}" target="_blank">
                                 <img class="card-img-top img-fluid detail-image-view-prints" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -35,7 +36,7 @@
                         </div>
 
                 <!-- Col 2 -->
-                        <div class="col col-8 product-detail-info-col">
+                        <div class="col col-6 product-detail-info-col">
                             <div class="card-body pb-0">
                                 <p class="mb-0 frame-title">{{ product.name }}</p>
                             </div>
