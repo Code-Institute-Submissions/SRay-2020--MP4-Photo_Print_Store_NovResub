@@ -795,6 +795,14 @@ padding-left: 2rem;
 
   @media screen and (max-width: 768px) {
 
+    .light-overlay {
+        height: 100%;
+        width: 100%;
+        margin-top: 2.5rem;
+        margin-left: 0rem; 
+        margin-right: 0rem;
+    }
+
   .custom-toggler {
     font-size: 1.5rem;
     transform: translate( 200px , 1px );
@@ -813,6 +821,84 @@ padding-left: 2rem;
 .start-design-button {
     transform: translateY( -35px );
 }
+
+/* Prints Page */
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    margin-top: 2.5rem;
+    margin-left: 0rem;
+    margin-right: 0rem; 
+    align-content: center;
+}
+
+.print-card a img {
+    height: 17rem; 
+}
+
+.quantity-row {
+    margin-left: 8rem;
+}
+
+.button-column-products {
+    transform: translate( -70px, 0px);
+}
+
+.print-image-preview {
+    height: 12rem;
+    width: 17rem;
+    transform: translate( 11px, 30px );
+}
+
+.detail-image-view {
+    height: 23rem;
+    width: 17rem;
+    transform: translate( 20px, 16px );
+}
+
+.prints-container {
+    height: 80%;
+    width: 100%;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4rem;
+}
+
+/* Frames Page */
+
+.frames-container {
+    margin-left: 5rem;
+}
+
+
+
+/* Product Management */
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    margin-left: 0rem; 
+    margin-right: 0rem;
+}
+
+.cancel-button {
+    margin-left: 1rem;
+}
+
+.add-update-product {
+    margin-left: 7rem;
+}
+
+/* Shopping Bag */
+
+.main-page-title-headings {
+    margin-top: 2rem;
+    line-height: 6rem;
+    font-size: 3rem;
+}
+
 
 }
 
@@ -881,6 +967,51 @@ padding-left: 2rem;
     letter-spacing: 2px;
 }
 
+/* Product Management */
 
+.cancel-button {
+    margin-left: 0rem;
+    font-size: 1rem;
+}
+
+
+.add-update-product {
+    margin-left: 2rem;
+    font-size: 1rem;
+}
+
+.edit-cancel-button {
+    margin-left: 0rem;
+    font-size: .75rem;
+}
+
+.update-product {
+    margin-left: 2rem;
+    font-size: .75rem;
+}
+
+.main-add-product-section {
+    width: 80%!important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Prints Page */
+
+
+/* Frames Page */
+
+.main-page-title-headings {
+    margin-top: 2rem;
+    line-height: 0rem;
+    font-size: 2rem;
+    letter-spacing: 8px;
+    margin-left: 2rem;
+}
+
+.frames-container {
+margin-left: 1rem;
+width: 100%;
+}
 
 }
