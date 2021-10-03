@@ -51,7 +51,6 @@ text-decoration: wavy;
 
 /* Toasts */
 
-
 .message-container {
     position: fixed;
     top: 72px;
@@ -76,6 +75,57 @@ text-decoration: wavy;
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+/* Cookie Container */
+
+.cookie-container {
+
+    max-width: 1200px;
+    align-content: center;
+    margin: auto;
+    border-radius: 10px;
+    position: fixed;
+    bottom: -200%;
+    left: 0;
+    right: 0;
+    background: #818181;
+    color: #fff;
+    padding: 1rem 13rem;
+    text-align: center;
+    font-size: 1rem;
+    transition: 400ms;
+    box-shadow: 0 -2px 16px rgba(46, 46, 46, 0.459);
+    z-index: 10;
+}
+
+.cookie-container.active {
+    bottom: 0;
+ 
+}
+
+.cookie-container a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.cookie-btn {
+    background: rgb(160, 147, 240);
+    border: 0;
+    color: rgb(0, 0, 0);
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0rem;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cookie-btn:hover {
+    background: rgba(202, 196, 240, .85);
+    transition: 400ms;
+}
+
 
 /* Header Container */
 
