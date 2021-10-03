@@ -797,7 +797,7 @@ padding-left: 2rem;
 
   .custom-toggler {
     font-size: 1.5rem;
-    transform: translate( 305px , 1px );
+    transform: translate( 200px , 1px );
     border-color: rgb(255, 255, 255)!important;
 }
 
@@ -821,17 +821,50 @@ padding-left: 2rem;
 .logo-size {
     margin-top: 1rem;
     margin-bottom: 1rem; 
+    width: 5rem;
+    height: 3rem;
+}
+
+.nav-link {
+    padding: 0;
+}
+
+.nav-link .profile-icon i {
+    font-size: 1rem;
+}
+
+.nav-link .bag-icon i {
+    font-size: 1rem;
+}
+
+.profile-icon p {
+    font-size: .75rem;
+}
+
+.bag-icon p {
+    font-size: .75rem;
+}
+
+.navbar-ul li {
+    display: inline;
+    float: left;
+}
+
+.nav-icon-links {
+    padding-left: 50px;
+    float: left;
 }
 
 .custom-toggler {
-    font-size: 1.5rem;
-    transform: translate( 90px , 0px );
+    font-size: .75rem;
+    transform: translate( 30px , 0px );
     border-color: rgb(255, 255, 255)!important;
 }
 
 .new-custom-navbar li a {
-    font-size: .75rem;
-    margin-left: 5.5rem;
+    font-size: .5rem;
+    margin-left: 2rem;
+    padding-top: 8px;
     letter-spacing: 2px;
 }
 
