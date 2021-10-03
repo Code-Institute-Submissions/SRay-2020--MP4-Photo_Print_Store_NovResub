@@ -219,6 +219,46 @@ text-decoration: wavy;
     z-index: 1;
 }
 
+/* ADD/EDIT Product styles */
+
+.subtext-muted {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.product-buttons {
+    margin-bottom: 2rem;
+}
+
+.cancel-button {
+    margin-left: 10rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    background-color: rgb(224, 221, 221);
+}
+
+.edit-cancel-button {
+    margin-left: 3rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    background-color: rgb(224, 221, 221);
+}
+
+.add-update-product {
+    margin-left: 20rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    background-color: rgb(224, 221, 221);
+}
+
+.update-product {
+    margin-left: 15rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    background-color: rgb(224, 221, 221);
+}
+
 /* Product Details Page */
 
 .print-image-preview {
@@ -282,6 +322,17 @@ font-weight: 600;
     height: 17rem;
     width: 23rem;
     transform: translate( 5px, 16px );
+}
+
+.edit-product-btn {
+    color: #596f62;
+    font-size: 1rem;
+    padding-left: 2rem;
+}
+
+.delete-product-btn {
+color: darkred;
+padding-left: 2rem;
 }
 
 /* Frames Page */
@@ -385,10 +436,12 @@ font-weight: 600;
 
 .print-card {
  margin-top: 2rem;
+
 }
 
 .print-price {
     margin-top: 6rem;
+    margin-bottom: 2rem;
 }
 
 .card-description {

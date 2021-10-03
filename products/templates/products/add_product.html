@@ -12,18 +12,12 @@
 {% block content %}
     <div class="overlay"></div>
     <div class="container">
-        <!-- <div class="row">
-            <div class="col-6 col-md-6">
-                <hr>
-                <h2 class="logo-font mb-4">Product Management</h2>
-                <h5 class="text-muted">Add a Product</h5>
-                <hr>
-            </div> -->
+    
             <div class="row">
                 <div class="col text-center">
-                    <hr>
+                    
                     <h2 class="underline smaller-title-headings">Product Management</h2>
-                    <h5 class="text-muted">Add a Product</h5>
+                    <h5 class="subtext-muted">Add a Product</h5>
                     <hr>
                 </div>
             </div>
@@ -43,9 +37,10 @@
                             {{ field }}
                         {% endif %}
                     {% endfor %}
-                    <div class="text-right">
-                        <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn btn-black rounded-0" type="submit">Add Product</button>
+                    <hr>
+                    <div class="text-right product-buttons">
+                        <a class="btn cancel-button rounded-0" href="{% url 'home' %}">Cancel</a>
+                        <button class="btn add-update-product rounded-0" type="submit">Add Product</button>
                     </div>
                 </form>
             </div>

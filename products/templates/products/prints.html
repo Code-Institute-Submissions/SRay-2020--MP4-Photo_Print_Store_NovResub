@@ -15,7 +15,7 @@
     <div class="container-fluid item-view-container">
         <div class="row">
             <div class="col text-center">
-                <h2 class="underline main-page-title-headings">Prints Page</h2>
+                <h2 class="underline main-page-title-headings">Prints</h2>
             </div>
         </div>
 
@@ -58,12 +58,7 @@
                                         </div>
                                     </div>
                                      <!-- IF ADMIN EDIT/DELETE ITEMS *CRUD -->
-                                     {% if request.user.is_superuser %}
-                                     <small class="ml-3">
-                                         <a href="{% url 'edit_product' print.id %}">Edit</a>
-                                         <a class="text-danger" href="{% url 'delete_product' print.id %}" onclick="return confirm('Are you sure you want to delete this item?');" >Delete</a>
-                                     </small>
-                                     {% endif %}
+                                   
                                 </div>
 
                             </div>
