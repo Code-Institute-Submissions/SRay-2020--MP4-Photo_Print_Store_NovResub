@@ -28,8 +28,8 @@
                     <br> We appreciate your custom!</p>
             </div>
         </div>
-        <div class="row heckout-success-container">
-            <div class="col-12 col-lg-7">
+        <div class="row orderinfo-success-container">
+            <div class="col-12 col-lg-8">
                 <div class="order-confirmation-wrapper p-2 border">
                     <div class="row">
                         <div class="col">
@@ -197,14 +197,14 @@
         <div class="row .checkout-success-bottom">
 			<div class="col-12 col-lg-7 text-right">
                 {% if from_profile %}
-                    <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
+                    <a href="{% url 'profile' %}" class="btn return-button rounded-0 my-2">
                         <span class="icon mr-2">
                             <i class="fas fa-angle-left"></i>
                         </span>
                         <span class="text-uppercase">Return to Profile</span>
                     </a>
                 {% else %}
-                    <a href="{% url 'products' %}?department=photoprints" class="btn btn-black rounded-0 my-2">
+                    <a href="{% url 'products' %}?department=photoprints" class="btn new-prints-button rounded-0 my-2">
                         <span class="icon mr-2">
                             <i class="fas fa-gifts"></i>
                         </span>

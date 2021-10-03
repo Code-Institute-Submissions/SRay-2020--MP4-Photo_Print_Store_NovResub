@@ -25,6 +25,31 @@ def all_products(request):
 
     return render(request, 'products/products.html', context)
 
+def all_prints(request):
+    prints = Product.objects.filter(department="1")
+    
+    context = {
+        'prints': prints,
+    }
+
+    return render(request, 'products/prints.html', context)
+
+
+def all_frames(request):
+    frames = Product.objects.filter(department="2")
+    
+    context = {
+        'frames': frames,
+    }
+
+    return render(request, 'products/frames.html', context)
+
+
+
+
+
+
+
 def product_detail(request, product_id):
   
     product = get_object_or_404(Product, pk=product_id)

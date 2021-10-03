@@ -15,7 +15,7 @@
     <div class="container-fluid item-view-container">
         <div class="row">
             <div class="col text-center">
-                <h2 class="underline main-page-title-headings">Prints</h2>
+                <h2 class="underline main-page-title-headings">Prints Page</h2>
             </div>
         </div>
 
@@ -23,51 +23,55 @@
             <div class="prints-container col-10">
 
                 <div class="row">
-                    
-                    {% for product in products %}
-                        <div class="col-1"></div>
-                        <div class="col-10 cold-md-10 col-lg-10 col-xl-10 b-1">
-                            <div class="card border-0 print-card">
-                                <!-- New Row-->
-                                <div class="row">
-                                    <!-- Col 1  -->
-                                    <div class="col">
-                                    {% if product.image %}
-                                    <a href="{% url 'print_detail' print.id %}">
-                                        <img class="card-img-top img-fluid" src="{{ print.image.url }}" alt="{{ print.name }}">
-                                    </a>
-                                    {% else %}
-                                    <a href="{% url 'print_detail' print.id %}">
-                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ print.name }}">
-                                    </a>
-                                    {% endif %}
+                    {% for print in prints %}
+                    <div class="col-1"></div>
+                    <div class="col-10 cold-md-10 col-lg-10 col-xl-10 b-1">
+                        <div class="card border-0 print-card">
+                            <!-- New Row-->
+                            <div class="row">
+                                <!-- Col 1  -->
+                                <div class="col">
+                                {% if print.image %}
+                                <a href="{% url 'product_detail_prints' print.id %}">
+                                    <img class="card-img-top img-fluid" src="{{ print.image.url }}" alt="{{ print.name }}">
+                                </a>
+                                {% else %}
+                                <a href="{% url 'product_detail_prints' print.id %}">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ print.name }}">
+                                </a>
+                                {% endif %}
+                                </div>
+                                <!-- Col 2 -->
+                                <div class="col">
+                                    <div class="card-body pb-0">
+                                        <p class="mb-0 print-title">"{{ print.name }}"</p>
                                     </div>
-                                    <!-- Col 2 -->
-                                    <div class="col">
-                                        <div class="card-body pb-0">
-                                            <p class="mb-0 print-title">{{ product.name }}</p>
-                                        </div>
-                                        <div class="card-description pb-0 card-body">
-                                            <p class="mb-0">{{ product.description }}</p>
-                                        </div>
-                                        <div class="card-footer pt-0 border-0 text-left">
-                                            <div class="row">
-                                                <div class="col print-price">
-                                                    <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
+                                    <div class="card-description pb-0 card-body">
+                                        <p class="mb-0">{{ print.description }}</p>
+                                    </div>
+                                    <div class="pt-0 border-0 text-left">
+                                        <div class="row">
+                                            <div class="col print-price">
+                                                <p class="lead mb-0 text-left font-weight-bold">€{{ print.price }}</p>
 
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
-
+                                     <!-- IF ADMIN EDIT/DELETE ITEMS *CRUD -->
+                                     {% if request.user.is_superuser %}
+                                     <small class="ml-3">
+                                         <a href="{% url 'edit_product' print.id %}">Edit</a>
+                                         <a class="text-danger" href="{% url 'delete_product' print.id %}">Delete</a>
+                                     </small>
+                                     {% endif %}
                                 </div>
 
                             </div>
+
                         </div>
-                        <div class="col-1"></div>
-                    {% endfor %}
-
-
+                    </div>
+                    <div class="col-1"></div>
+                {% endfor %}
                 </div>
 
             </div> 
