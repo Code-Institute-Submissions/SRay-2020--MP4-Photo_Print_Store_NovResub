@@ -68,14 +68,25 @@ select option[value=""] {
     height: 100%;
 }
 
+
 /* Checkout Success */
-
 .checkout-success-container {
-  padding-left: 10rem!important;
-}
-
-.checkout-success-bottom{
-  padding-top: 3rem;
-  padding-left: 28rem!important;
+  padding-left: 20rem!important;
+  }
   
-}
+  .orderinfo-success-container {
+      padding-left: 20rem!important;
+  }
+  
+  .return-button {
+      padding-left: 26rem!important;
+  }
+  
+  .new-prints-button {
+      padding-left: 30rem!important;
+  }
+  
+  .checkout-success-bottom {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+  }

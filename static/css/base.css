@@ -575,20 +575,28 @@ font-weight: 600;
     border-radius: 0;
 }
 
-
 /* Checkout Success */
 
-.orderinfo-success-container {
-    padding-left: 16rem!important;
-}
-
-.return-button {
-    padding-left: 16rem!important;
-}
-
-.new-prints-button {
-    padding-left: 16rem!important;
-}
+.checkout-success-container {
+    padding-left: 20rem!important;
+    }
+    
+    .orderinfo-success-container {
+        padding-left: 20rem!important;
+    }
+    
+    .return-button {
+        padding-left: 26rem!important;
+    }
+    
+    .new-prints-button {
+        padding-left: 30rem!important;
+    }
+    
+    .checkout-success-bottom {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
 
 /* -- Media Queries */
 
@@ -629,13 +637,8 @@ font-weight: 600;
 /* Checkout Success */
 
 .checkout-success-container {
-    padding-left: 16rem!important;
-  }
-
-.orderinfo-success-container {
-    padding-left: 16rem!important;
-  }
-
+    padding-left: 20rem!important;
+}
 
 
 /* Larger container on xl screens */
