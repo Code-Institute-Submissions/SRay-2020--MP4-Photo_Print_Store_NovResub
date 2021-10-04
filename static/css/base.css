@@ -593,7 +593,6 @@ padding-left: 2rem;
     margin: 0;
   position: absolute;
   margin-top: 2rem;
-  -ms-transform: translateY(-50%);
   transform: translate( 510px, 0px);
 }
 
@@ -696,7 +695,6 @@ padding-left: 2rem;
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     background-color: rgb(160, 147, 240);
-    border-color: rgb(160, 147, 240);
     border-radius: 0;
 }
 
@@ -792,7 +790,7 @@ color:rgb(160, 147, 240);
 .checkout-success-container {
     padding-left: 20rem!important;
 }
-
+}
 
 /* Larger container on xl screens */
 @media (min-width: 1200px) {
@@ -1051,14 +1049,13 @@ margin-left: 9.5rem!important;
     padding: 1rem 6rem;
 }
 
+}
+
 @media screen and (max-width: 375px) {
 
 body {
     position: absolute;
 }
-
-
-
 
 /* Cookie Banner */
 
@@ -1095,19 +1092,12 @@ body {
     margin-right: 0rem;
 }
 
-
-
-
-
 /* Navbar */
 
 .header-container {
     padding-top: 100px;
     max-width: 375px;
 }
-
-
-
 
 .logo-size {
     margin-top: 1rem;
@@ -1384,6 +1374,5 @@ width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
-
 
 }

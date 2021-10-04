@@ -236,7 +236,7 @@ AmIResponsive (website) - To ensure site is responsive and create mockup
 
 The CSS code was passed through W3C CSS Validator and final version contained no errors. It was also passed through AutoPrefixer Online to parse CSS and add vendor prefixes to ensure validity.
 
-<img src="#">
+<img src="media/mp4cssvalidator.png">
 
 The HTML code was passed through W3C HTML Validator and FreeFormatter.com to ensure final version contained no errors.
 
@@ -251,6 +251,9 @@ The Python code was tested using 'Python Tutor' and 'Extends Class - Python Synt
 Chrome Developer Tools were used throughout this project and were greatly relied on to make all manner of adjustments and changes to project.
 
 (ii)Chrome Lighthouse -
+
+
+<img src="media/mp4googlelighthouse.png">
 
 Chrome Lighthouse was used to ensure that the website has been deployed in the most efficient way possible – the screen shots below reflect the score of this project under four headings 
     • Performance
@@ -278,7 +281,6 @@ These changes included -
     • Improve crawlability of href attribute of anchor elements links
 
 
-<img src="media/mp4googlelighthouse.png">
 
 #### **Function tests -**
 
@@ -295,7 +297,7 @@ Tests will be applied to all the pages included in the project, these pages will
  1. Home Page
  2. Prints Page
  3. Frames Page
- 4. Design Page
+ 4. Blog Page
  5. Profile Page
  6. Login/Register Page
  
@@ -316,7 +318,7 @@ Tests will be applied to all the pages included in the project, these pages will
 - Observed Results: When loaded this page loaded without any issue and in a time that was satisfactory.
 - Test Summary: There was no outstanding differences between the expected behaviour of this test and the observed results. 
 
-4. Design Page - 
+4. Blog Page - 
 - Expected Behaviour: Page will load correctly and promptly, with all elements in place where they should be.
 - Observed Results: When loaded this page loaded without any issue and in a time that was satisfactory.
 - Test Summary: There was no outstanding differences between the expected behaviour of this test and the observed results. 
