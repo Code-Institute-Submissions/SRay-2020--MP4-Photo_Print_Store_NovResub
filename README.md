@@ -10,7 +10,7 @@
 ## Project Summary:
 ### The goal of this project is to design and create a photography e-commerce and community web based application. This will be done using Python on the Django framework, written in HTML & Css and using JavaScript for further functionality. The main goal of the web app owner will be to provide a platform for customers to purchase framed photograph prints and frames using a secure payment service which allows user profiles to persist a shopping bag and return to checkout at a future time. There will also be a community blog component that will allow photographers, artists and other customers to share ideas and discuss featured pieces.
 
-### Link to Live Site - "#"
+### Link to Live Site - "https://mp4-amateur-aperture.herokuapp.com/"
 
 
 
@@ -86,14 +86,20 @@ Customer  -
 12. As a customer I want to change the quantity of the items I add to my bag
 13. As a customer I want to checkout my bag of items in a safe and reputable environment 
 
+Community - 
+
+14. As a community member I want to view blog posts
+15. As a community member I want to comment on blog posts 
+16. As a community memberI want to create my own blog posts
+
 
 Website Owner - 
 
-14. As the website owner I want to make money by offering goods to the users
-15. As the website owner I want the users to enjoy using my application
-16. As the website owner I want users to stay on my site for as long as possible
-17. As the website owner I want the users to return to my website
-18. As the website owner I want users to be able to trust the security and payment features that I have implemented
+17. As the website owner I want to make money by offering goods to the users
+18. As the website owner I want the users to enjoy using my application
+19. As the website owner I want users to stay on my site for as long as possible
+20. As the website owner I want the users to return to my website
+21. As the website owner I want users to be able to trust the security and payment features that I have implemented
 
 ### **SCOPE**
 
@@ -120,7 +126,7 @@ These areas are:
 1. Landing Page 
 2. Frames Page 
 3. Prints Page 
-4. Design Page 
+4. Blog Page 
 5. Registration Page ( for new users)
 6. Login/Logout Pages (for existing users to login in using a username and password)
 
@@ -165,15 +171,15 @@ All images were designed and created by the author.
 - Navigation buttons that link to all pages
 - Navigation buttons includes user feedback for click
 - User can create unique login name and password to protect persistent checkout bag
-- User can upload and preview images for printing in 'Design' page
+- User can create blog posts and comment on other posts
 - Admin can create, edit and delete saleable items
 - Profile page with database query feedback (previous checkout orders)
 
 ### **FUTURE FEATURES**
 
-- Public gallery of previously ordered images
 - Login from social media accounts
--
+- Add more customisation to profiles to develop community aspect of site
+
 
 
 ### **TECHNOLOGIES USED**
