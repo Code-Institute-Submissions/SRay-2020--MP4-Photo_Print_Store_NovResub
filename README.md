@@ -261,22 +261,24 @@ Chrome Lighthouse was used to ensure that the website has been deployed in the m
 
 These changes included - 
 1. Performance: 
-    • 
+    • Performace can be improved by serve images in next-gen formats
+    • Image elements do not have explicit width and height
 
 
 2. Accessibility:
-    • 
+    • No changes could be implemented to improve this score at this time
 
  
 3. Best Practices:
-     • 
+    • No changes could be implemented to improve this score at this time
 
 
 4. SEO:
-    • 
+    • Add meta description to project
+    • Improve crawlability of href attribute of anchor elements links
 
 
-<img src="">
+<img src="media/mp4googlelighthouse.png">
 
 #### **Function tests -**
 
