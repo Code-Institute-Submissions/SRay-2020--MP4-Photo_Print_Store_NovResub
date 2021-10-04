@@ -138,7 +138,7 @@ The database used for this project is Postgres, the relational logic of this typ
 ##### **Blog App**
 
 
-<img src="media/mp4blogmodel.jpg">
+<img src="media/mp4blogmodel.jpeg">
 
 ##### **Checkout App**
 
@@ -148,12 +148,12 @@ The database used for this project is Postgres, the relational logic of this typ
 ##### **Products App**
 <hr>
 
-<img src="">
+<img src="media/mp4productmodels.jpeg">
 
 ###### Profiles App
 <hr>
 
-<img src="">
+<img src="media/mp4profilemodel.jpeg">
 
 
 ### **SKELETON**
