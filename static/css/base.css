@@ -716,6 +716,13 @@ color:rgb(160, 147, 240);
 
 .checkout-form-large-size {
     margin-left: 0rem!important;
+    padding-left: 5rem;
+    padding-right: 4rem;
+}
+
+.checkout-title {
+    padding-left: 5rem;
+    padding-right: 4rem;
 }
 
 
@@ -1046,6 +1053,13 @@ margin-left: 9.5rem!important;
 
 @media screen and (max-width: 375px) {
 
+body {
+    position: absolute;
+}
+
+
+
+
 /* Cookie Banner */
 
 .cookie-container {
@@ -1061,10 +1075,39 @@ margin-left: 9.5rem!important;
     font-size: .75rem;
 }
 
+/* Overlays */
+
+.container {
+    max-width: 320px;
+}
 
 .allauth-overlay {
-    width: 100%;
+    max-width: 100%;
 }    
+
+
+.light-overlay {
+    max-width: 375px;
+    height: 100%;
+    width: 100%;
+    margin-top: 2.5rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+}
+
+
+
+
+
+/* Navbar */
+
+.header-container {
+    padding-top: 100px;
+    max-width: 375px;
+}
+
+
+
 
 .logo-size {
     margin-top: 1rem;
@@ -1206,6 +1249,7 @@ margin-left: 9.5rem!important;
 .keep-shopping-btn {
     margin-left: 4rem;
     font-size:.75rem;
+    padding-right: 6rem!important;
 }
 
 .bag-total-col {
@@ -1253,8 +1297,9 @@ margin-left: 9.5rem!important;
 /* Checkout Page */
 
 .checkout-form-large-size {
-    margin-left: 0rem!important;
-    }
+    padding-left: 0rem!important;
+    padding-right: 0rem!important;
+}
 
 .checkout-submit-section {
 margin-top: 0rem!important;
@@ -1323,8 +1368,12 @@ margin-left: -2rem!important;
 }
 
 .frames-container {
-margin-left: 1rem;
+margin-left: 0rem;
 width: 100%;
+}
+
+.frame-card a img {
+    height: 14rem;
 }
 
 /* Logout Page */
