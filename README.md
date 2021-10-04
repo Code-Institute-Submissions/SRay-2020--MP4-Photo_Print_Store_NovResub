@@ -130,7 +130,30 @@ These areas are:
 5. Registration Page ( for new users)
 6. Login/Logout Pages (for existing users to login in using a username and password)
 
+
+#### Database
+
 The database used for this project is Postgres, the relational logic of this type of database was suitable for the purposes of this project.
+
+###### Blog App
+<hr>
+
+<img src="mp4blogmodel.jpg">
+
+###### Checkout App
+<hr>
+
+<img src="">
+
+###### Products App
+<hr>
+
+<img src="">
+
+###### Profiles App
+<hr>
+
+<img src="">
 
 
 ### **SKELETON**
