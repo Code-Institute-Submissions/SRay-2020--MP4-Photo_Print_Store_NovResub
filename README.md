@@ -131,21 +131,21 @@ These areas are:
 6. Login/Logout Pages (for existing users to login in using a username and password)
 
 
-#### Database
+#### **Database**
 
 The database used for this project is Postgres, the relational logic of this type of database was suitable for the purposes of this project.
 
-###### Blog App
-<hr>
+##### **Blog App**
 
-<img src="mp4blogmodel.jpg">
 
-###### Checkout App
-<hr>
+<img src="media/mp4blogmodel.jpg">
 
-<img src="">
+##### **Checkout App**
 
-###### Products App
+
+<img src="media/mp4checkoutmodels.jpeg">
+
+##### **Products App**
 <hr>
 
 <img src="">
