@@ -196,7 +196,6 @@ text-decoration: wavy;
 }
 
 
-/* from Bulma */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -598,8 +597,6 @@ padding-left: 2rem;
   transform: translate( 510px, 0px);
 }
 
-/* Design Page */
-
 /* Image Uploader */
 
 .imagePreview {
@@ -675,9 +672,6 @@ padding-left: 2rem;
     bottom:0;
 }
 
-
-/* Image Uploader Styles */
-
 /* Product Form */
 
 .btn-file {
@@ -706,7 +700,22 @@ padding-left: 2rem;
     border-radius: 0;
 }
 
+/* Checkout Page */
+
+.final-checkout-btn {
+margin-left: 3rem!important;
+background-color: black;
+color:rgb(160, 147, 240);
+}
+
+.secure-checkout-icon i {
+color:rgb(160, 147, 240);
+}
+
 /* Checkout Success */
+
+
+
 
 .checkout-success-container {
     padding-left: 20rem!important;
@@ -1060,6 +1069,22 @@ padding-left: 2rem;
     min-width: 6rem;
     letter-spacing: 2px;
 }
+
+/* Toasts */
+
+.message-container {
+    position: fixed;
+    max-width: 200px;
+    top: 66px;
+    right: 90px;
+    z-index: 99999999999;
+}
+
+.toast-header button {
+    margin-left: 6rem;
+}
+
+
 /* Shopping Bag */
 
 .back-to-shop-btn {
@@ -1136,6 +1161,27 @@ padding-left: 2rem;
     color: rgb(160, 147, 240)!important;
     border-radius: 25px;
 }
+
+/* Checkout Page */
+
+.checkout-submit-section {
+margin-top: 0rem!important;
+}
+
+.final-checkout-btn {
+margin-left:3rem!important;
+background-color: black;
+color:rgb(160, 147, 240);
+}
+    
+.secure-checkout-icon i {
+color:rgb(160, 147, 240);
+}
+
+.back-to-bag-btn {
+    margin-left: 3.5rem!important;
+}
+
 
 /* Product Management */
 
