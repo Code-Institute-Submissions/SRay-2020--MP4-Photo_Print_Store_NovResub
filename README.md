@@ -8,7 +8,7 @@
 ---
 
 ## Project Summary:
-### The goal of this project is to design and create a photography e-commerce and community web based application. This will be done using Python on the Django framework, written in HTML & Css and using JavaScript for further functionality. The main goal of the web app owner will be to provide a platform for customers to upload their image files to be printed (and possibly framed) and then purchased using a secure payment which allows user profiles to persist a shopping bag and return to checkout at a future time. 
+### The goal of this project is to design and create a photography e-commerce and community web based application. This will be done using Python on the Django framework, written in HTML & Css and using JavaScript for further functionality. The main goal of the web app owner will be to provide a platform for customers to purchase framed photograph prints and frames using a secure payment service which allows user profiles to persist a shopping bag and return to checkout at a future time. There will also be a community blog component that will allow photographers, artists and other customers to share ideas and discuss featured pieces.
 
 ### Link to Live Site - "#"
 
