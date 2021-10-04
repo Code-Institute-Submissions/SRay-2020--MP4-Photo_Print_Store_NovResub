@@ -1,34 +1,44 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block page_header %}
+<!-- Use for other page templates, -->
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
 {% endblock %}
+
 {% block content %}
 
 <div class="overlay"></div>
     <div class="container-fluid item-view-container">
         <div class="row">
             <div class="col text-center">
-                <h2 class="underline main-page-title-headings">Our Community Forum</h2>
+                <h2 class="underline blog-page-title-headings">Our Community Forum</h2>
             </div>
         </div>
-    </div>
+    
 
-<div class="container">
-  <div class="row">
-    <!-- Posts -->
-    <div class="col-md-8 offset-md-2 mt-3 center">
-      {% for post in post_list %}
-        <div class="card mb-4">
-          <div class="card-body">
-            <h2 class="card-title text-center">{{ post.title }}</h2>
-            <p class="card-text text-muted h6 text-right">{{ post.author }} | {{ post.created_on}} </p>
-            <p class="card-text">{{post.content|safe|slice:":200" }}</p>
-            <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary order-btn">Read More &rarr;</a>
+        <div class="container">
+          <div class="row">
+            <!-- Posts -->
+            <div class="col-md-8 offset-md-2 mt-3 center">
+              {% for post in post_list %}
+                <div class="card mb-4">
+                  <div class="card-body">
+                    <h2 class="card-title text-center">{{ post.title }}</h2>
+                    <p class="card-text text-muted h6 text-right">{{ post.author }} | {{ post.created_on}} </p>
+                    <p class="card-text">{{post.content|safe|slice:":200" }}</p>
+                    <a href="{% url 'post_detail' post.slug  %}" class="btn blog-read-more-btn order-btn">Read More &rarr;</a>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
           </div>
         </div>
-      {% endfor %}
+
     </div>
-  </div>
-</div>
 
 {% endblock %}
