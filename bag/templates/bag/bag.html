@@ -58,7 +58,7 @@
                         </div>
                         <div class="row"><div class="col"><hr></div></div>
                     {% endfor %}
-                    <div class="btt-button shadow-sm rounded-0 border border-black">
+                    <div class="scroll-top-btn shadow-sm rounded-0 border border-black">
                         <a class="btt-link d-flex h-100">
                             <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
                         </a>	
@@ -145,6 +145,12 @@
          .done(function() {
              location.reload();
          });
+    })
+</script>
+<!-- Scroll to top button -->
+<script type="text/javascript">
+    $('.btt-link').click(function(e) {
+        window.scrollTo(0,0)
     })
 </script>
 {% endblock %}
