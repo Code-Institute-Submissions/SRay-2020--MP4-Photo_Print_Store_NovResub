@@ -18,11 +18,12 @@
                 <h2 class="underline main-page-title-headings">Prints</h2>
             </div>
         </div>
+<!-- Title Ends -->
 
         <div class="row">
             <div class="prints-container col-10">
 
-                <div class="row">
+                <div class="row d-none d-lg-block">
                     {% for print in prints %}
                     <div class="col-1"></div>
                     <div class="col-10 cold-md-10 col-lg-10 col-xl-10 b-1">
@@ -57,7 +58,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                     <!-- IF ADMIN EDIT/DELETE ITEMS *CRUD -->
                                    
                                 </div>
 
@@ -71,6 +71,80 @@
 
             </div> 
         </div>
+<!-- Original File Ends -->
+
+<!-- New File Begins -->
+
+    <div class="d-block d-lg-none">
+
+        {% for print in prints %}
+        <!-- COL LEFT -->
+        
+        <!-- COL RIGHT -->
+        <div class="col-12 b-1">
+            <div class="card border-0 print-card">
+                <!-- New Row-->
+                <div class="row">
+                    <!-- Row 1  -->
+                    {% if print.image %}
+                    <a href="{% url 'product_detail' print.id %}">
+                        <img class="card-img-top img-fluid" src="{{ print.image.url }}" alt="{{ print.name }}">
+                    </a>
+                    {% else %}
+                    <a href="{% url 'product_detail' print.id %}">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ print.name }}">
+                    </a>
+                    {% endif %}
+                </div>
+                    <!-- Row 2 -->
+                <div class="row">
+
+                        <div class="card-body pb-0">
+                            <p class="mb-0 print-title">"{{ print.name }}"</p>
+                        </div>
+                        <div class="card-description pb-0 card-body">
+                            <p class="mb-0">{{ print.description }}</p>
+                        </div>
+                        <div class="pt-0 border-0 text-left">
+                            <div class="row">
+                                <div class="col print-price">
+                                    <p class="lead mb-0 text-left font-weight-bold">€{{ print.price }}</p>
+                                </div>
+                            </div>
+                        </div>
+                       
+                </div>
+            <!-- End New Row-->
+                
+
+            </div>
+        </div>
+        <!-- COL RIGHT -->
+    {% endfor %}
+
+    </div>
+<!-- End New Snippet -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
     </div>
 
 {% endblock %}

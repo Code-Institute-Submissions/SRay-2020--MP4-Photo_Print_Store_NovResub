@@ -459,7 +459,7 @@ padding-left: 2rem;
     height: 80%;
     width: 80%;
     margin-top: 0;
-    margin-left: 11rem;
+    margin-left: 16rem;
     margin-right: 2rem;
     margin-bottom: 4rem;
 }
@@ -883,7 +883,8 @@ color:rgb(160, 147, 240);
 }
 
 .print-card a img {
-    height: 17rem; 
+    height: 23rem;
+    width: 34rem;
 }
 
 .quantity-row {
@@ -910,10 +911,31 @@ color:rgb(160, 147, 240);
     height: 80%;
     width: 100%;
     margin-top: 0;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 4rem;
+    margin-left: 6rem;
+    margin-right: 0rem;
+    margin-bottom: 0rem;
 }
+
+.print-card {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0rem;
+}
+
+.card-description {
+    font-size: 1.25rem;
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.print-price {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
 
 /* Frames Page */
 
@@ -1119,6 +1141,35 @@ margin-left: 9.5rem!important;
 
 .toast-header button {
     margin-left: 6rem;
+}
+
+/* Prints Page */
+
+.print-card a img {
+    height: 15rem;
+}
+
+.print-title {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    font-family: 'Spartan', sans-serif;
+    color: rgb(46, 45, 45);
+    text-align: center;
+}
+
+.card-description {
+    font-size: .75rem;
+    font-weight: 500;
+    color: black;
+    text-align: center;
+}
+
+.print-price {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 
