@@ -8,10 +8,6 @@ class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "blog/blog.html"
 
-def post_list(request):
-    posts = Post.objects.all()
-
-    return render(request, "blog/post_list.html", {"posts" : posts})
 
 def post_detail(request, slug):
     template_name = "blog/post_detail.html"
