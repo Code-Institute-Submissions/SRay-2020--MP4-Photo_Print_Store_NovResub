@@ -523,6 +523,17 @@ padding-left: 2rem;
     margin-left: 20rem;
 }
 
+.blog-comment-btn {
+    background: rgb(0, 0, 0);
+    color: rgb(160, 147, 240);
+    min-width: 8rem;
+    font-weight: 600;
+    border-radius: 25px;
+    letter-spacing: 4px;
+    font-size: 1rem;
+    margin-left: 0rem;
+}
+
 /* Shopping Bag */
 
 .light-overlay {
@@ -813,6 +824,17 @@ color:rgb(160, 147, 240);
 }
 }
 
+
+@media (min-width: 1450px) {
+
+    .blog-read-more-btn {
+        margin-left: 15rem!important;
+        min-width: 25rem!important;
+    }
+
+
+}
+
 /* Larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
@@ -827,7 +849,19 @@ color:rgb(160, 147, 240);
         margin-left: 1rem;
         margin-right: 1rem;
         letter-spacing: 4px;
+    }
+
+        .blog-read-more-btn {
+            background: rgb(0, 0, 0);
+            color: rgb(160, 147, 240);
+            min-width: 20rem;
+            font-weight: 600;
+            border-radius: 25px;
+            letter-spacing: 4px;
+            font-size: 1rem;
+            margin-left: 8rem;
         }
+
 
   }
 
@@ -969,6 +1003,11 @@ color:rgb(160, 147, 240);
     margin-left: 5rem;
 }
 
+/* Blog Page */
+
+.blog-read-more-btn {   
+    margin-left: 3rem;
+}
 
 
 /* Product Management */
@@ -1386,6 +1425,21 @@ width: 100%;
 .frame-card a img {
     height: 14rem;
 }
+
+/* Blog Page */
+
+.blog-page-title-headings {
+    margin-top: 2rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
+}
+
+.blog-read-more-btn {
+    min-width: 10rem;
+    margin-left: 2rem;
+}
+
+
 
 /* Logout Page */
 
