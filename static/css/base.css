@@ -1103,6 +1103,20 @@ margin-left: 9.5rem!important;
     padding-right: 0rem!important;
 }
 
+/* Order History Page */
+
+.checkout-success-container {
+    padding-left: 4rem!important;
+}
+
+.orderinfo-success-container {
+    padding-left: 3rem!important;
+}
+
+.return-button {
+    padding-left: 6rem!important;
+}
+
 /* Logout Page */
 
 .allauth-form-inner-content {
@@ -1515,6 +1529,19 @@ margin-top: 1rem!important;
 margin-left: -2rem!important;
 }
 
+/* Order History Page */
+
+.checkout-success-container {
+    padding-left: 0rem!important;
+}
+
+.orderinfo-success-container {
+    padding-left: 0rem!important;
+}
+
+.return-button {
+    padding-left: 4rem!important;
+}
 
 /* Product Management */
 
