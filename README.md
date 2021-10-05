@@ -432,23 +432,36 @@ Customer  -
 
 - 
 
+Community - 
+
+14. As a community member I want to view blog posts
+
+- 
+15. As a community member I want to comment on blog posts 
+
+- 
+16. As a community memberI want to create my own blog posts
+
+- 
+
 Website Owner - 
 
-14. As the website owner I want to make money by offering goods to the users
+17. As the website owner I want to make money by offering goods to the users
 
 - 
-15. As the website owner I want the users to enjoy using my application
+18. As the website owner I want the users to enjoy using my application
 
 - 
-16. As the website owner I want users to stay on my site for as long as possible
+19. As the website owner I want users to stay on my site for as long as possible
 
 - 
-17. As the website owner I want the users to return to my website
+20. As the website owner I want the users to return to my website
 
 - 
-18. As the website owner I want users to be able to trust the security and payment features that I have implemented
+21. As the website owner I want users to be able to trust the security and payment features that I have implemented
 
 - 
+
 ### **BUG FIXES**
 
 
