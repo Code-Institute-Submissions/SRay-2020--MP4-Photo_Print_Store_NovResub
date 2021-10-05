@@ -590,9 +590,7 @@ python3 manage.py loaddata prints
 
 ## Quickstart for project
 
-------------------- 
-
-pip3 install -r requirements.txt
+-------------------             
 
 python3 manage.py makemigrations --dry-run
 
@@ -608,7 +606,6 @@ python3 manage.py loaddata products
 
 
  
-
 ## Heroku Login
 
 ---------------------------
