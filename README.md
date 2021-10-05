@@ -464,6 +464,7 @@ Website Owner -
 
 ### **BUG FIXES**
 
+Blog App issues - needed to supply direct link to page for django to recognise
 
 ### **IMPLEMENTATION ISSUES**
 
