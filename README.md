@@ -60,7 +60,7 @@ A digital render of how the site would look on different devices and screen size
 ### **STRATEGY**
 
 #### SITE OWNER GOALS:
-The main goal of this project is to create a photograph printing e-commerce store which also offers users to oppourtunuity to purchase photoframes and other artist's work. 
+The main goal of this project is to create a photograph printing e-commerce store which also offers users to oppourtunuity to purchase photoframes and other artist's work. The site will also contain a blog component to give users more ways to engage with the products and content of the site.
 
 Target Audience: Photograpghers, Artists, General public 
 
@@ -90,16 +90,15 @@ Community -
 
 14. As a community member I want to view blog posts
 15. As a community member I want to comment on blog posts 
-16. As a community memberI want to create my own blog posts
 
 
 Website Owner - 
 
-17. As the website owner I want to make money by offering goods to the users
-18. As the website owner I want the users to enjoy using my application
-19. As the website owner I want users to stay on my site for as long as possible
-20. As the website owner I want the users to return to my website
-21. As the website owner I want users to be able to trust the security and payment features that I have implemented
+16. As the website owner I want to make money by offering goods to the users
+17. As the website owner I want the users to enjoy using my application
+18. As the website owner I want users to stay on my site for as long as possible
+19. As the website owner I want the users to return to my website
+20. As the website owner I want users to be able to trust the security and payment features that I have implemented
 
 ### **SCOPE**
 
@@ -111,24 +110,30 @@ Functional specifications:
 - Password protected user accounts
 - Checkout bag for customers (including bag preview)
 - Stripe payments
-- Allow admin to create, edit and delete items
+- Allow admin to create, edit and delete products for sale
+- Allow admin to create and delete blog posts
+- Allow admin to moderate user comments on blog posts
 
 
 Content specifications:
-- Data retrieval display (from Popstrgres using Flask)
+- Data retrieval display (from Postrgres using Flask)
 - Custom artwork
 
 ### **STRUCTURE**
 
-The website is laid out over 7 pages which can be broken down into 6 seperate areas. 
+The website is laid out over many pages which can be broken down into 10 seperate areas. 
 These areas are:
 
 1. Landing Page 
-2. Frames Page 
-3. Prints Page 
-4. Blog Page 
+2. Frames Page (Overview and Individual Frames)
+3. Prints Page (Overview and Individual Prints)
+4. Blog Page (Overview and Individual Posts)
 5. Registration Page ( for new users)
-6. Login/Logout Pages (for existing users to login in using a username and password)
+6. Sign In/Sign Out Pages (for existing users to login in using a username and password)
+7. Profile Page
+8. Bag Page
+9. Checkout Page
+10. Checkout Success Page
 
 
 #### **Database**
@@ -192,18 +197,24 @@ All images were designed and created by the author.
 
 - Media responsiveness on all device sizes
 - Navigation buttons that link to all pages
-- Navigation buttons includes user feedback for click
+- Navigation buttons includes user feedback for click & hover
 - User can create unique login name and password to protect persistent checkout bag
-- User can create blog posts and comment on other posts
+- User can view blog posts uploaded by admin
+- User can comment on blog posts
 - Admin can create, edit and delete saleable items
+- Admin can create, edit and delete blog posts
+- Admin can review and approve (or disapprove) all comments made by users on blog posts
 - Profile page with database query feedback (previous checkout orders)
+- Toasts to give user specific feedback on current stage of ordering items
+- Secure checkout for all saleable items (using Stripe)
 
 ### **FUTURE FEATURES**
 
 - Login from social media accounts
 - Add more customisation to profiles to develop community aspect of site
-
-
+- Add images on blog posts to improve user engagement
+- Add user reviews to confirmed product purchases
+- Add user community comments on reviews
 
 ### **TECHNOLOGIES USED**
 
@@ -307,7 +318,8 @@ These changes included -
 
 #### **Function tests -**
 
-This site was tested many times manually throughout the development process by the author and friends and family to ensure that it's functions behave exactly as they are intended to. This process was again repeated when hosted to ensure that there were no changes to functionality. 
+This site was tested many times manually throughout the development process by the author and friends and family to ensure that it's functions behave exactly as they are intended to. 
+This process was again repeated when hosted to ensure that there were no changes to functionality. 
 
 Below are a list of the 
 - Test cases
@@ -315,53 +327,111 @@ Below are a list of the
 - Observed Results
 - Summary of expected behaviour and results 
 
-Tests will be applied to all the pages included in the project, these pages will be referred to as:
+Manual tests applied to all the pages included in the project -
 
- 1. Home Page
- 2. Prints Page
- 3. Frames Page
- 4. Blog Page
- 5. Profile Page
- 6. Login/Register Page
+1. Landing Page 
+2. Prints Page (Overview and Individual Prints)
+3. Frames Page (Overview and Individual Frames)
+4. Blog Page (Overview and Individual Posts)
+5. Registration Page ( for new users)
+6. Sign In/Sign Out Pages (for existing users to login in using a username and password)
+7. Profile Page
+8. Bag Page
+9. Checkout Page
+10. Checkout Success Page
  
-**Test Case I:** Initial Page Load and display
+**Test Case I:** Cookie banner pops up on all page links (first time user's browser lands on page)
 
-1. Home Page - 
+(i)Landing Page, (ii)Prints Page (iii)Frames Page, (iv)Blog Page, (v)Registration Page, (vi)Sign in/Signout, 
+(vii)Profile Page, (viii)Bag Page, (ix)Checkout Page, (x)Checkout Success Page -
+
+- Expected Behaviour: Cookie banner pops up on bottom of any page link until the 'Accept and Close' is clicked. This information should be stored in local storage (cookies).
+- Observed Results: When user originally lands on website the cookier banner pops up on the bottom of the page. This remains if any link on the site was clicked and remains until user accepts terms and this information is stored in the application's local storage, until removed.
+- Test Summary: There was no outstanding differences between the expected behaviour of this test and the observed results. 
+
+**Test Case II:** Initial Page Load and display
+
+(i)Landing Page, (ii)Prints Page (iii)Frames Page, (iv)Blog Page, (v)Registration Page, (vi)Sign in/Signout, 
+(vii)Profile Page, (viii)Bag Page, (ix)Checkout Page, (x)Checkout Success Page -
+
 - Expected Behaviour: Page will load correctly and promptly, with all elements in place where they should be.
 - Observed Results: When loaded this page loaded without any issue and in a time that was satisfactory.
 - Test Summary: There was no outstanding differences between the expected behaviour of this test and the observed results. 
 
-2. Prints Page - 
-- Expected Behaviour: Page will load correctly and promptly, with all elements in place where they should be.
-- Observed Results: When loaded this page loaded without any issue and in a time that was satisfactory.
+**Test Case III:** Navigation and page links all work correctly
+
+(i)Landing Page, (ii)Prints Page (iii)Frames Page, (iv)Blog Page, (v)Registration Page, (vi)Sign in/Signout, 
+(vii)Profile Page, (viii)Bag Page, (ix)Checkout Page, (x)Checkout Success Page -
+
+- Expected Behaviour: Pages will allow user to click links on navbar and will be re-directed back to the relevant page
+- Observed Results: When all navbar and page links were clicked on the above pages the pages directed to where they were supposed to
 - Test Summary: There was no outstanding differences between the expected behaviour of this test and the observed results. 
 
-3. Frames Page - 
-- Expected Behaviour: Page will load correctly and promptly, with all elements in place where they should be.
-- Observed Results: When loaded this page loaded without any issue and in a time that was satisfactory.
+**Test Case IV:** Toasts display to User (Success, Error, Info and Warnings)
+
+(ii)Prints Page, (iii)Frames Page, (iv)Blog Page, (v)Registration Page, (vi)Sign in/Signout, 
+(vii)Profile Page, (viii)Bag Page, (ix)Checkout Page, (x)Checkout Success Page -
+
+- Expected Behaviour: When toast triggers were set off on the above pages, a corresponding message should display on screen
+- Observed Results: When the toasts were triggered they displayed on the top of the page to give user feedback as to specific actions they were taking.
 - Test Summary: There was no outstanding differences between the expected behaviour of this test and the observed results. 
 
-4. Blog Page - 
-- Expected Behaviour: Page will load correctly and promptly, with all elements in place where they should be.
-- Observed Results: When loaded this page loaded without any issue and in a time that was satisfactory.
+**Test Case V:** New User registration 
+
+(v)Registration Page
+
+- Expected Behaviour: When a new user clicks the register button they should be given a form to complete. When this is done they will be sent a confirmation email to ensure they are really connected to the email account. 
+- Observed Results: When user entered the required details a confirmation email was sent to the email address they gave and when the link in this email was followed and clicked they could confirm their account. Once this was completed they could login and logout as often as they wanted adn their profile information was saved.
 - Test Summary: There was no outstanding differences between the expected behaviour of this test and the observed results. 
 
-5. Profile Page - 
-- Expected Behaviour: Page will load correctly and promptly, with all elements in place where they should be.
-- Observed Results: When loaded this page loaded without any issue and in a time that was satisfactory.
+**Test Case VI:** Login and Logout functionality
+
+(vi)Sign in/Signout, 
+
+
+- Expected Behaviour: When a user clicks 'Sign In' they should be able to put in their username or email address and password and then have access to all user elements of the site (including persistent shopping bag and personal info saved in the profile tab). When the 'Sign Out' button is clicked user should be asked to confirm logout and if the affirmative is selected they should be logged out and there be no personal information attached to that session.
+- Observed Results: When the correct login details were entered user was able to see past orders on the profile app and also that items they had added to the bag previously were still there. When signout was clicked they were asked if they wanted to signout and when yes was clicked their profile was removed from the session.
 - Test Summary: There was no outstanding differences between the expected behaviour of this test and the observed results. 
 
-6. Login/Register Page - 
-- Expected Behaviour: Page will load correctly and promptly, with all elements in place where they should be.
-- Observed Results: When loaded this page loaded without any issue and in a time that was satisfactory.
+**Test Case VII:** Send items to bag and bag persist functionality
+
+(ii)Prints Page, (iii)Frames Page,v (viii)Bag Page, 
+
+- Expected Behaviour: When user clicks 'add to bag' on a product it should be added to the users bag for review and checkout. If the user wants to delete an item or update the  quantity they should be able to using the corresponding buttons. This bag should be persistent if the user logs out and the back in they should be able to complete this order. 
+- Observed Results: When 'Add to bag' was clicked on a product it was added to bag. On the bag page the user could click the increment or decrement button and then the update button the item quantity was updated. When the delete button was clicked the item was removed. When items were added to the bag and the user logged out, the same items were still there when they logged back in. 
 - Test Summary: There was no outstanding differences between the expected behaviour of this test and the observed results. 
 
-**Test Case II:** 
+**Test Case VIII:** Checkout bag works
+
+(viii) Bag Page, (ix)Checkout Page, (x)Checkout Success Page, 
+
+- Expected Behaviour: When user enters correct personal and credit card details and they should be re-directed to the Checkout success page where the payment will be confirmed and the order should be stored in the database which can be viewed by the user in their profle page
+- Observed Results: When the test Stripe payment details were entered on the checkout page along with some test personal details there was an overlay which waited several seconds and then redirected to the payment success page where a copy of the order was displayed. After this when looking at the user profile page a copy of this order was accessible with all the previous order information. 
+- Test Summary: There was no outstanding differences between the expected behaviour of this test and the observed results. 
 
 
-**Test Case III:** Error 404 Page
+**Test Case IX:** Edit and Delete Functionality for Admin on Product pages
+
+ (ii)Prints Page, (iii)Frames Page -  
+
+- Expected Behaviour: When an Admin (superuser) is logged in they should be able to edit and delete products (Prints and Frames) directly from the product details pages on live website. For extra security, if delete is clicked an alert will popup to prevent accidental deletes and get admin to confirm delete.
+- Observed Results: When user was logged in as superuser the 'edit' and 'delete' buttons were displayed on the product details pages. When edit was clicked it brought admin to the product edit page and when 'update' button was pressed it allowed user to change the details of any existing object. When the delete button was pressed an alert popped up on the top of the screen which asked the user "Are you sure they want to delete item" if user presses 'Cancel' the object is not deleted and if 'Okay' is pressed then the item is deleted. 
+- Test Summary: There was no outstanding differences between the expected behaviour of this test and the observed results. 
+
+
+**Test Case X:** CRUD Functionality for Admin 
+
+Django Admin Page -
+
+- Expected Behaviour: When an Admin (superuser) logs into the Django admin interface they should be able to carry out all actions relating to creating, editing and deleting objects relating to the models in database for the application.
+- Observed Results: When user logged in as superuser and followed link ("https://mp4-amateur-aperture.herokuapp.com/admin/') to site it was possible to create, read, edit and delete all objects within models on the database.
+- Test Summary: There was no outstanding differences between the expected behaviour of this test and the observed results. 
+
+
+**Test Case XI:** Error 404 Page
 
 Error 404 Page - 
+
 - Expected Behaviour: If a user inputs an incorrect HTML the custom 'Error 404' HTML page should be displayed, including navigation back to other pages of website. 
 - Observed Results: When an incorrect HTML was entered the user was redirected to custom Error 404 page, which had buttons on top to re-direct back to all other pages of website.  
 - Test Summary: There was no outstanding differences between the expected behaviour of this test and the observed results. 
