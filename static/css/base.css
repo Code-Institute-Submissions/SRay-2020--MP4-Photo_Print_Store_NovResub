@@ -842,18 +842,18 @@ color:rgb(160, 147, 240);
     font-size: 1.25rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    
-    .blog-read-more-btn {
-        background: rgb(0, 0, 0);
-        color: rgb(160, 147, 240);
-        min-width: 20rem;
-        font-weight: 600;
-        border-radius: 25px;
-        letter-spacing: 4px;
-       font-size: 1rem;
-        margin-left: 8rem;
-    }
+}
 
+.blog-read-more-btn {
+    background: rgb(0, 0, 0);
+    color: rgb(160, 147, 240);
+    min-width: 20rem;
+    font-weight: 600;
+    border-radius: 25px;
+    letter-spacing: 4px;
+   font-size: 1rem;
+    margin-left: 8rem;
+}
 
 /* Checkout Page */
 
@@ -1290,6 +1290,18 @@ body {
 
 /* Product Detailed Views */
 
+.header-container {
+    padding-top: 80px;
+    max-width: 375px;
+}
+
+.item-detail-view-container {
+    background: rgba(235, 233, 233, 0.95);
+    z-index: -10;
+    height: 480px;
+    max-height: 480px;
+}
+
 .product-detail-container {
    
 
@@ -1303,6 +1315,19 @@ body {
 
 }
 
+.form-group {
+    width: 80%!important; 
+}
+
+
+.card-body {
+    padding: .5rem .5rem;
+}
+
+.lead {
+    font-size: 1rem;
+}
+
 .detail-image-view {
     height: 7rem;
     width: 17rem;
@@ -1311,6 +1336,9 @@ body {
 
 .product-detail-info-col .frame-title {
     font-size: 1rem;
+    margin-top: 0rem;
+    margin-right: 0rem;
+    text-align: center;
 }
 
 .frame-dimensions {
@@ -1333,15 +1361,49 @@ body {
     margin-left: 0rem;
 }
 
+.quantity-title {
+    margin-top: 0rem!important;
+    margin-bottom: 0rem;
+}
+
+.plus-minus-btn button span {
+    width: .75rem;
+    height: .75rem;
+}
+
+.decrement-qty {
+    width: 2.75rem;
+    height: .75rem;
+}
+
+.increment-qty {
+    width: .75rem;
+    height: .75rem;
+}
+
+.qty_input {
+    padding-left: 1rem!important;
+    width: 2rem!important;
+    height: 2rem;
+}
+
 .add-bag-button {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 0!important;
+    padding-bottom: 0!important;
     min-width: 2rem;
     font-weight: 600;
     border-radius: 15px;
     letter-spacing: 4px;
     font-size: 0.75rem;
     transform: translate( 0px, 0px);
+}
+
+.button-column-products {
+    transform: translate( 0px, 0px)!important;
+}
+
+.button-column-products a {
+    margin-top: 1rem!important;
 }
 
 
