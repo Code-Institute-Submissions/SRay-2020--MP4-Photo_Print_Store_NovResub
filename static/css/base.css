@@ -742,6 +742,10 @@ color:rgb(160, 147, 240);
 color:rgb(160, 147, 240);
 }
 
+.allauth-form-inner-content a {
+    color:rgb(84, 61, 231);
+}
+
 /* Checkout Success */
 
 .checkout-form-large-size {
