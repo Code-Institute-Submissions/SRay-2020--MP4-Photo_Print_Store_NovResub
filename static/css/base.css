@@ -810,12 +810,17 @@ color:rgb(160, 147, 240);
 .update-link  {
     cursor: pointer!important;
     padding-right: 1rem;
+    color: #596f62;
+}
 }
 
 .remove-item {
     cursor: pointer!important;
     padding-left: 1rem;
+    color: darkred;
 }
+
+
 
 /* Checkout Success */
 
@@ -867,8 +872,21 @@ color:rgb(160, 147, 240);
         }
 
 
-  }
+/* Checkout Page */
 
+.remove-item {
+    cursor: pointer!important;
+    padding-left: 1rem;
+    color: darkred;
+}
+
+.update-link {
+    cursor: pointer!important;
+    padding-right: 0rem;
+    color: #596f62;
+}
+
+}
 
   
   /* fixed top navbar only on md and bigger */
@@ -1055,6 +1073,26 @@ margin-left: 3.5rem!important;
 .card-charge-text {
 margin-top: 1rem!important;
 margin-left: 9.5rem!important;
+}
+
+.quant-form {
+    margin-right: 4rem!important;
+    width: 10rem!important;
+    transform: translate( 0px, 0px)!important;
+}
+
+.update-link {
+    cursor: pointer!important;
+    padding-right: 0rem;
+    font-size: .85rem;
+    color: #596f62;
+}
+
+.remove-item {
+    cursor: pointer!important;
+    padding-left: 0rem;
+    font-size: .85rem;
+    color: darkred;
 }
     
 
