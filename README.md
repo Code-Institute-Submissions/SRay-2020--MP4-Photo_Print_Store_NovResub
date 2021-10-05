@@ -545,29 +545,7 @@ All images were custom designed and created specifically for this project.
 - Friends and Family (for testing)
 
 
-## REQUIREMENTS
 
-----------------
-
-pip3 install -r requirements.txt
-
-Creating New Apps
-python3 manage.py startapp 'name'
-
-Add to INSTALLED APPS in Settings.py
-
-Setting Up Django Project
-pip3 install django
-
-django-admin startproject boutique_ado . - Creates files we'll need (settings.py, urls.py etc.)
-
-touch .gitignore (create our git ignore file)
-
-python3 manage.py runserver (Run project)
-
-python3 manage.py migrate - To run migrations
-
-python3 manage.py createsuperuser - To create admin user 23rd/09th - sray2021 pword = photoprints1
 
 ## Initial Commit
 
@@ -614,9 +592,6 @@ python3 manage.py loaddata categories
 
 python3 manage.py loaddata products
 
-export STRIPE_SECRET_KEY=sk_test_51JYSDEAQb6q0x2KwYN4xfF2sbuhyLr1PP3L75QVtfa54AHeOZKL4LtABmw8R5CrElDKq6kDnLfsrMiGvQnmk7SuC00Che5f4US (old)
-
-export STRIPE_PUBLIC_KEY=pk_test_51JYSDEAQb6q0x2KwgVMPWeio4ynVOjfeAOYiTKJY5j1PuNt9fq5ydDkuAeave2L5qf5YqBphC2KCkmhqzVQ0yQxA00dRAxgEED(old)
 
  
 
