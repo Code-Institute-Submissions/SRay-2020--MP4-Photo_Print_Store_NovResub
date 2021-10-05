@@ -37,7 +37,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)afxnhh(r05ss0d572$%j@(vaksx3i56q8$vexklkf@=%ft@0m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
+
+
 
 ALLOWED_HOSTS = ['mp4-amateur-aperture.herokuapp.com', 'localhost']
 
