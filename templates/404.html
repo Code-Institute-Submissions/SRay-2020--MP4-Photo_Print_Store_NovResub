@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <div class="overlay"></div>
+    <div class="container-fluid item-view-container">
+        <div class="row">
+            <div class="col text-center">
+                <h2 class="underline main-page-title-headings">ERROR 404</h2>
+            </div>
+        </div>
+<!-- Title Ends -->
+
+    <div class="row">
+        <div class="prints-container col-10">
+            <P>Something's gone wrong...</P>
+            <p>Return to <a href="{% url 'home' %}"> Home Page </a></p>
+        </div> 
+    </div>  
+{% endblock %}
