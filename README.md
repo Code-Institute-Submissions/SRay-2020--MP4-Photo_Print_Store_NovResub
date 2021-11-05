@@ -13,7 +13,6 @@
 ### Link to Live Site - "https://mp4-amateur-aperture.herokuapp.com/"
 
 
-
 <img src="media/mp4websitemockup.png">
 
 
@@ -315,7 +314,6 @@ These changes included -
     • Improve crawlability of href attribute of anchor elements links
 
 
-
 #### **Function tests -**
 
 This site was tested many times manually throughout the development process by the author and friends and family to ensure that it's functions behave exactly as they are intended to. 
@@ -395,7 +393,7 @@ Manual tests applied to all the pages included in the project -
 
 **Test Case VII:** Send items to bag and bag persist functionality
 
-(ii)Prints Page, (iii)Frames Page,v (viii)Bag Page, 
+(ii)Prints Page, (iii)Frames Page, (viii)Bag Page, 
 
 - Expected Behaviour: When user clicks 'add to bag' on a product it should be added to the users bag for review and checkout. If the user wants to delete an item or update the  quantity they should be able to using the corresponding buttons. This bag should be persistent if the user logs out and the back in they should be able to complete this order. 
 - Observed Results: When 'Add to bag' was clicked on a product it was added to bag. On the bag page the user could click the increment or decrement button and then the update button the item quantity was updated. When the delete button was clicked the item was removed. When items were added to the bag and the user logged out, the same items were still there when they logged back in. 
@@ -457,15 +455,12 @@ Though the sote was developed through Google Chrome, after it had been deployed 
 
 **Website user -**
 
-Website user -
-
 1. As a user I want a visually appealing and smooth website experience
 
-- 
+-  
 2. As a user I want to be given visual feedback about my actions 
 
 - 
-
 3. As a website user I want to be able to navigate the website easily and intuitively
 
 - 
@@ -484,7 +479,8 @@ Website user -
 8. As a user I want to receive email confirmation to register my account
 
 - 
-Customer  - 
+
+**Customer -**
 
 9. As a customer I want to view products for sale in distinct categories
 
@@ -494,15 +490,14 @@ Customer  -
 - 
 11. As a customer I want to add products to a shopping bag before checking out
 
--   
+- 
 12. As a customer I want to change the quantity of the items I add to my bag
 
 - 
 13. As a customer I want to checkout my bag of items in a safe and reputable environment
 
 - 
-
-Community - 
+**Community  -** 
 
 14. As a community member I want to view blog posts
 
@@ -510,28 +505,23 @@ Community -
 15. As a community member I want to comment on blog posts 
 
 - 
-16. As a community memberI want to create my own blog posts
+**Website Owner -**
+
+16. As the website owner I want to make money by offering goods to the users
 
 - 
-
-Website Owner - 
-
-17. As the website owner I want to make money by offering goods to the users
+17. As the website owner I want the users to enjoy using my application
 
 - 
-18. As the website owner I want the users to enjoy using my application
+18. As the website owner I want users to stay on my site for as long as possible
 
 - 
-19. As the website owner I want users to stay on my site for as long as possible
+19. As the website owner I want the users to return to my website
 
 - 
-20. As the website owner I want the users to return to my website
+20. As the website owner I want users to be able to trust the security and payment features that I have implemented
 
 - 
-21. As the website owner I want users to be able to trust the security and payment features that I have implemented
-
-- 
-
 ### **BUG FIXES**
 
 Blog App issues - needed to supply direct link to page for django to recognise
@@ -540,13 +530,6 @@ Blog App issues - needed to supply direct link to page for django to recognise
 
 
 ### **DEPLOYMENT**
-
-
-**Git Hub Pages**
-
-This project was developed in the Gitpod development environment. I initialised the project by creating a new repository for the project in GitHub and used this as a storing point to push the project to at various points through out the development process. Using the git add function I staged my code at many times and used the Git Commit command to save all changes. Finally, I used the Git Push command to send all the changes back to my repository on GitHub.
-
-After initial deployment this site could no longer be access through GitHub pages without re-adding the 'env.py' file due to the sensitive information contained within. From this point onwards I accessed the site directly through Gitpod pages or from Heroku. 
 
 **Deployment -**
 
@@ -627,73 +610,3 @@ All images were custom designed and created specifically for this project.
 - Mentor (Spencer Shelton)
 - Slack Community
 - Friends and Family (for testing)
-
-
-
-
-## Initial Commit
-
-----------------------
-
-Django-Allauth for authorisation
-pip3 install django-allauth==0.41.0
-
-Add allauth additional settings to settings and urls.py fils (see video Allauth Setup 1)
-
-Navigate to admin of site - open port 8000 /admin + login details
-
-Migrate app for new additions (python3 manage.py migrate)
-
-Migrations
-python3 manage.py makemigrations --dry-run
-
-python3 manage.py makemigrations
-
-python3 manage.py migrate --plan
-
-python3 manage.py migrate
-
-Loading Data
-python3 manage.py loaddata frames
-
-python3 manage.py loaddata prints
-
-## Quickstart for project
-
--------------------             
-
-python3 manage.py makemigrations --dry-run
-
-python3 manage.py makemigrations
-
-python3 manage.py migrate --plan
-
-python3 manage.py migrate
-
-python3 manage.py loaddata categories
-
-python3 manage.py loaddata products
-
-
- 
-## Heroku Login
-
----------------------------
-
-If heroku login doesn't work, use
-
-'heroku login -i'
-
-heroku git:remote -a 'yourapp'
-
-'git push -u heroku' - *** No master!
-
-## Code Refactoring
-----------------
-python3 -m flake8
-
-
-## Making Templates 
---------------------
-
-mkdir templates
