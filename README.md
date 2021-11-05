@@ -550,11 +550,30 @@ All requirements needed to initialise project can be found i the 'requirements.t
 #### **General Elements -** 
 
 - Code Institute (Course content & Slack Community)
-- 2021 Complete Python Bootcamp From Zero to Hero in Python - Jose Portilla (Udemy)
-- 
-- 
+- 2021 Complete Python Bootcamp From Zero to Hero in Python - Jose Portilla (Udemy Course)
+- Python Crash Course, 2nd Edition: A Hands-On, Project-Based Introduction to Programming - Eric Matthes (2019)
+- Clean Code: A Handbook of Agile Software Craftmanship - Robert Cecil Martin (2008)
 
 #### **Specific Elements -** 
+
+**Django Models**
+- Django Docs: (https://docs.djangoproject.com/en/3.2/topics/db/models/?fbclid=IwAR1aVc0soUrhxjdYdWXVKuk5YB05Wm52d8E-EaXnP8QSn-rx3e7jTSGzO1E)
+- The Net Ninja: (https://www.youtube.com/watch?v=5zNR3E6WRLE)
+- Pretty Printed: (https://www.youtube.com/watch?v=r9kT-jm136Q)
+- Django Central: (https://djangocentral.com/building-a-blog-application-with-django/)
+- Django Central: (https://djangocentral.com/creating-comments-system-with-django/)
+
+
+**Adding Custom Error Pages**
+- Stack Overflow: (https://stackoverflow.com/questions/17662928/django-creating-a-custom-500-404-error-page)
+- Django Docs: (https://docs.djangoproject.com/en/3.0/ref/views/)
+
+
+**AWS Website Hosting**
+- Amazon Web Services: (https://www.youtube.com/watch?v=BpFKnPae1oY)
+- AWS Docs: (https://d1.awsstatic.com/whitepapers/Building%20Static%20Websites%20on%20AWS.pdf)
+- Medium: (https://medium.com/@kyle.galbraith/how-to-host-a-website-on-s3-without-getting-lost-in-the-sea-e2b82aa6cd38) 
+
 
 **Adding Favicons to Website**
 - Dani Krossing: (https://www.youtube.com/watch?v=kEf1xSwX5D8)
@@ -562,7 +581,8 @@ All requirements needed to initialise project can be found i the 'requirements.t
 **Buttons** 
 - FDossena: (https://fdossena.com/?p=html5cool/buttons/i.frag)
 - W3Schools: (https://www.w3schools.com/css/css3_buttons.asp)
-- Bootstrap Docs: ()
+- Bootstrap Docs: (https://getbootstrap.com/docs/4.0/components/buttons/)
+
 
 **CSS Animations/Transformation**
 -Web Dev Simplified: (https://www.youtube.com/watch?v=YszONjKpgg4)
@@ -582,7 +602,7 @@ All requirements needed to initialise project can be found i the 'requirements.t
 - Web.dev: (https://web.dev/image-aspect-ratio/?utm_source=lighthouse&utm_medium=devtools)
 
 **Media Queries**
-– CSS Tricks: (https://css-tricks.com/snippets/css/media-queries-for-standard-devices/)
+- CSS Tricks: (https://css-tricks.com/snippets/css/media-queries-for-standard-devices/)
 - W3Schools: (https://www.w3schools.com/css/css_rwd_mediaqueries.asp)
 - Code Grepper: (https://www.codegrepper.com/code-examples/delphi/bootstrap+hide+image+on+mobile)
 
