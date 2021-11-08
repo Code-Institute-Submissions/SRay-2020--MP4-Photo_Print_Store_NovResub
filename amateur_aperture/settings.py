@@ -41,8 +41,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # DEBUG = True
 DEBUG = 'DEVELOPMENT' in os.environ
 
-
-
 ALLOWED_HOSTS = ['mp4-amateur-aperture.herokuapp.com', 'localhost']
 
 # Use timezone
