@@ -61,7 +61,7 @@ A digital render of how the site would look on different devices and screen size
 #### SITE OWNER GOALS:
 The main goal of this project is to create a photograph printing e-commerce store which also offers users to oppourtunuity to purchase photoframes and other artist's work. The site will also contain a blog component to give users more ways to engage with the products and content of the site.
 
-Target Audience: Photograpghers, Artists, General public 
+Target Audience: Photograpghers, Artists, General Public 
 
 
 ### **User stories**
