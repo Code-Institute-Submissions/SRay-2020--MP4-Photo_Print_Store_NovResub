@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class Department(models.Model):
     name = models.CharField(max_length=254)
     display_name = models.CharField(max_length=254, null=True, blank=True)
@@ -14,7 +15,8 @@ class Department(models.Model):
 
 
 class Product(models.Model):
-    department = models.ForeignKey('Department', null=True, blank=True, on_delete=models.SET_NULL)
+    department = models.ForeignKey(
+        'Department', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     description = models.TextField()
     dimensions = models.CharField(max_length=254)

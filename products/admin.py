@@ -14,6 +14,7 @@ class ProductAdmin(admin.ModelAdmin):
 
     ordering = ('name',)
 
+
 class DepartmentAdmin(admin.ModelAdmin):
     list_display = (
         'name',
