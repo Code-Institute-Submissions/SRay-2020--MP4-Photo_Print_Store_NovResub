@@ -863,15 +863,15 @@ padding-left: 20rem!important;
     height: 100%;
     width: 80%;
     margin-top: 2.5rem;
-    margin-left: 8rem;
+    margin-left: 10rem;
 }
 
 .prints-container {
-    margin-left: 13rem;
+    margin-left: 16.5rem;
 }
 
 .frames-container {
-    margin-left: 8rem;
+    margin-left: 10rem;
 }
 
 .new-custom-navbar li a {
@@ -908,7 +908,7 @@ padding-left: 20rem!important;
 /* Error Pages */
 
 .error-container {
-    margin-left: 3rem;
+    margin-left: 6rem;
 }
 
 }
@@ -1191,7 +1191,7 @@ margin-left: 9.5rem!important;
 /* Error Pages */
 
 .error-container {
-    margin-left: 2rem;
+    margin-left: 4rem;
 }
 
 .error-page-title-headings {
@@ -1667,11 +1667,12 @@ width: 100%;
 
 .error-container {
     margin-left: 1rem;
-    font-size: 1.25rem;
+    font-size: 2.5rem;
 }
 
 .error-page-title-headings {
-    margin-top: 9rem;
+    margin-top: 6rem;
+    margin-left: .5rem;
     line-height: 6rem;
     font-size: 2rem;
     letter-spacing: 4px;
