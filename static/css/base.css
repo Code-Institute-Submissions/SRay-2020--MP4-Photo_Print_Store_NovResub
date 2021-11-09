@@ -786,7 +786,7 @@ padding-left: 20rem!important;
 }
 
 .error-btn {
-    color:rgb(160, 147, 240);
+    color:rgb(49, 22, 221);
 }
 
 
@@ -859,6 +859,21 @@ padding-left: 20rem!important;
     margin-top: 5rem;
 }
 
+.overlay {
+    height: 100%;
+    width: 80%;
+    margin-top: 2.5rem;
+    margin-left: 8rem;
+}
+
+.prints-container {
+    margin-left: 13rem;
+}
+
+.frames-container {
+    margin-left: 8rem;
+}
+
 .new-custom-navbar li a {
     font-size: 1.25rem;
     margin-left: 1rem;
@@ -888,6 +903,12 @@ padding-left: 20rem!important;
     cursor: pointer!important;
     padding-right: 0rem;
     color: #596f62;
+}
+
+/* Error Pages */
+
+.error-container {
+    margin-left: 3rem;
 }
 
 }
@@ -1166,6 +1187,22 @@ margin-left: 9.5rem!important;
     max-width: 768px;
     padding: 1rem 6rem;
 }
+
+/* Error Pages */
+
+.error-container {
+    margin-left: 2rem;
+}
+
+.error-page-title-headings {
+    margin-top: 9rem;
+    line-height: 6rem;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    font-family: 'Spartan', sans-serif;
+    z-index: 1;
+}
+
 
 }
 
@@ -1624,6 +1661,22 @@ width: 100%;
     padding-right: 0rem;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Error Pages */
+
+.error-container {
+    margin-left: 1rem;
+    font-size: 1.25rem;
+}
+
+.error-page-title-headings {
+    margin-top: 9rem;
+    line-height: 6rem;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    font-family: 'Spartan', sans-serif;
+    z-index: 1;
 }
 
 }
