@@ -531,19 +531,150 @@ Blog App issues - needed to supply direct link to page for django to recognise
 
 ### **DEPLOYMENT**
 
-**Deployment -**
-
 In the early stages of development I deployed the site live to Heroku - this allowed me to check the site was working across multiple devices and also that I was no longer relying on the 'env.py' file to access this project.
 
-**Creating clone of project -**
+#### **Local Deployment -**
 
-To create a clone of this project you can access it through the link on the Git Hub Repository, click the clipboard to copy the url, this can then be brought to the terminal when a new working directory can be set up and the clone saved. Once this is done you can type ‘git clone’ and paste the url and press enter and a new clone will be created.
+ To clone this repo directly in a code editor you can enter the command below -
+ git clone https://github.com/SRay-2020/-MP4-Photo_Print_Store
 
-**Running Clone on local machine -**
+This will be different to the previous method of copying the repository as it will contain the complete history of git commits. 
+           
+For local deployment you can download a copy of this repository directly from Github. 
 
-If you want to run this clone on a local machine you would go to the 'Clone' section on GitHub and click the url link in the HTTPS section. When you download and unzip these files to your desktop you can then open them in your own IDE shell and save them as a new directory. 
+You can do this by following this link (https://github.com/SRay-2020/-MP4-Photo_Print_Store) and then clicking the ‘Clone’ and then ‘Download Zip’ buttons. 
 
-All requirements needed to initialise project can be found i the 'requirements.txt' file. 
+Once you have extracted this file to you computer you can open as a new project in your code editor of choice. When you have done this you will then need to install the project requirements. You can do this by using the terminal command – 
+
+pip3 install -r requirements.txt
+
+Once this has been successfully done you can set up the environment variables for the project. The variables you will need are 
+
+    • SECRET_KEY
+    • STRIPE_PUBLIC_KEY
+    • STRIPE_SECRET_KEY
+    • STRIPE_WH_SECRET
+    • DEVELOPMENT = True
+
+Next you will use the following commands in the terminal to ensure all migrations have been made for the project - 
+
+    • python3 manage.py makemigrations --dry-run
+    • python3 manage.py makemigrations
+      
+    • python3 manage.py migrate --plan
+    • python3 manage.py migrate
+
+Then you can load the fixtures which are contained in the JSON files in the project. This project uses two fixtures which are relational, it is important to load them into the project in the following order. To do this you can use the following commands in the terminal 
+
+    • python3 manage.py loaddata categories
+    • python3 manage.py loaddata products
+
+
+       
+To get full access to this project you will need administrative privileges on your user account. To do this you will need to create a superuser account by entering the following command into the command terminal -
+
+python3 manage.py createsuperuser
+
+
+As well as allowing certain CRUD functionality on the website, this account will allow you to login to the back-end admin side of the website and do things like access the CRUD functionality of the saleable items and  create blog posts and approve or refuse user comments on blog posts. To access the admin page you can type ‘ /admin/ ‘ at the end of the preview 8000 port when it has been opened. 
+
+With all those steps complete you will be able to run the application locally by entering the following command in your terminal -  
+     
+ python3 manage.py runserver
+
+
+#### **Heroku Deployment -**
+
+To deploy this project to Heroku you will need to follow these steps. 
+
+First, create a new app on Heroku by giving the app a unique name and setting the region. 
+
+Next you will then need to apply a Postgres database to the project so the data can be stored on Heroku.
+
+To do this you need to go to the ‘Resources’ tab on the Heroku dashboard for your new app. Under the ‘Add-ons’ search bar you can type ‘Heroku Postgres’ and you can select the result that matches your search. 
+
+Then you will be asked to select a plan to add to your project, for this you can select the free ‘Hobby Dev – Free’ plan and click ‘ Submit Order Form’. This will attach Postgres to your Heroku app as DATABASE. 
+
+To connect this Postgres database to your project you are required to install two dependency packages back in your code editing terminal. They are ‘di_database_url’ and ‘psycopg2’. To install these go to your terminal and enter the following commands - 
+
+    • pip3 install dj_database_url
+    • pip3 install psycopg2
+
+You should then add these to the requirements.txt file (although they should already be there if you downloaded this file from the repo on Github).
+
+Now you will need to call one of these dependencies by  typing ‘ import dj_database_url’  into the beginning of your settings.py project level file (just below the call to ‘import os’).
+
+Below this, in the #Database section of the ‘settings.py’ file you can comment out the existing database settings and instead use the following settings - 
+
+
+      DATABASES = {
+              'default': dj_database_url.parse('DATABASE_URL')
+       }
+
+You can retrieve the ‘DATABASE_URL’ from the Settings page of Heroku by scrolling down to ‘Config Vars’ and then clicking ‘Reveal Config Vars’. This was automatically set when you added Postgres in an earlier step.
+
+Now you can migrate these changes to the project to initialise the Postgres Database. Do this by using the following commands - 
+
+    • python3 manage.py makemigrations --dry-run
+    • python3 manage.py makemigrations
+      
+    • python3 manage.py migrate --plan
+    • python3 manage.py migrate
+
+Now you can commit these changes to Git but first ensure that you have removed the DATABASE_URL so it is not saved in your version control history.
+
+The last thing to do to set up the Postgres Database is to copy the below if-else statement into your settings.py project level file. This will give the settings the logic of switching between the two different databases if Postgres isn’t available. (This will replace the exisitng #Database section mentioned above) - 
+
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+
+You will now need to create a ‘Procfile’ in your project so that Heroku knows how to run the application. To do this you can enter the below command - 
+
+touch Procfile 
+
+For Heroku to be able to work it requires an additional application server gateway. Here we will use Gunicorn. We can install this like our other dependencies by typing the following command in the terminal - 
+
+pip3 install gunicorn 
+
+
+Inside the Procfile you created you can place the following code to let Heroku know how to serve the application -
+
+web: gunicorn amateur_aperture.wsgi:application
+
+Next we will log into Heroku in the command line terminal. To do this you can type the following - 
+
+heroku login -i
+
+The terminal should ask you for your email address and password and on success you will be logged in here. 
+
+Once you have logged in ensure that your app is connected properly by using the following code in the terminal -
+
+heroku git:remote -a <your heroku app name>
+
+Then you will need to add Heroku to your allowed hosts in your project level settings file. To do this enter the following code into your settings.py file ( on the line just after DEBUG) - 
+
+ALLOWED_HOSTS = ['<your heroku app name>.herokuapp.com', 'localhost']
+
+To initialise the app on Heroku and allow for a successful build,  you will need to disable the static files from being returned. To do this you can use the following command in the terminal - 
+
+heroku config:set DISABLE_COLLECTSTATIC=1 --app <your heroku app name>
+
+Finally we can push everything to Heroku and this should initialise the build. To do this you can enter the following command in the terminal - 
+
+git push -u heroku 
+
+If you have followed all of the above steps correctly Heroku should build your application. 
+
+You can now go to the Heroku website and enable automatic deployments. I would not recommend this if you intend on making a lot of changes to the application as every time you push changes to Git, Heroku will build a new version of your application which can be resource intensive and slow down the development process. However, once the project is complete this is a good time to enable automatic deploys.
 
 ### **CREDITS**
 
