@@ -546,7 +546,7 @@ You can do this by following this link (https://github.com/SRay-2020/-MP4-Photo_
 
 Once you have extracted this file to you computer you can open as a new project in your code editor of choice. When you have done this you will then need to install the project requirements. You can do this by using the terminal command – 
 
-pip3 install -r requirements.txt
+    pip3 install -r requirements.txt
 
 Once this has been successfully done you can set up the environment variables for the project. The variables you will need are 
 
@@ -573,14 +573,14 @@ Then you can load the fixtures which are contained in the JSON files in the proj
        
 To get full access to this project you will need administrative privileges on your user account. To do this you will need to create a superuser account by entering the following command into the command terminal -
 
-python3 manage.py createsuperuser
+    python3 manage.py createsuperuser
 
 
 As well as allowing certain CRUD functionality on the website, this account will allow you to login to the back-end admin side of the website and do things like access the CRUD functionality of the saleable items and  create blog posts and approve or refuse user comments on blog posts. To access the admin page you can type ‘ /admin/ ‘ at the end of the preview 8000 port when it has been opened. 
 
 With all those steps complete you will be able to run the application locally by entering the following command in your terminal -  
      
- python3 manage.py runserver
+    python3 manage.py runserver
 
 
 #### **Heroku Deployment -**
@@ -625,52 +625,52 @@ Now you can commit these changes to Git but first ensure that you have removed t
 
 The last thing to do to set up the Postgres Database is to copy the below if-else statement into your settings.py project level file. This will give the settings the logic of switching between the two different databases if Postgres isn’t available. (This will replace the exisitng #Database section mentioned above) - 
 
-if 'DATABASE_URL' in os.environ:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
+        if 'DATABASE_URL' in os.environ:
+            DATABASES = {
+                'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+            }
+        else:
+            DATABASES = {
+                'default': {
+                    'ENGINE': 'django.db.backends.sqlite3',
+                    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+                }
+            }
 
 You will now need to create a ‘Procfile’ in your project so that Heroku knows how to run the application. To do this you can enter the below command - 
 
-touch Procfile 
+    touch Procfile 
 
 For Heroku to be able to work it requires an additional application server gateway. Here we will use Gunicorn. We can install this like our other dependencies by typing the following command in the terminal - 
 
-pip3 install gunicorn 
+    pip3 install gunicorn 
 
 
 Inside the Procfile you created you can place the following code to let Heroku know how to serve the application -
 
-web: gunicorn amateur_aperture.wsgi:application
+    web: gunicorn amateur_aperture.wsgi:application
 
 Next we will log into Heroku in the command line terminal. To do this you can type the following - 
 
-heroku login -i
+    heroku login -i
 
 The terminal should ask you for your email address and password and on success you will be logged in here. 
 
 Once you have logged in ensure that your app is connected properly by using the following code in the terminal -
 
-heroku git:remote -a <your heroku app name>
+    heroku git:remote -a <your heroku app name>
 
 Then you will need to add Heroku to your allowed hosts in your project level settings file. To do this enter the following code into your settings.py file ( on the line just after DEBUG) - 
 
-ALLOWED_HOSTS = ['<your heroku app name>.herokuapp.com', 'localhost']
+    ALLOWED_HOSTS = ['<your heroku app name>.herokuapp.com', 'localhost']
 
 To initialise the app on Heroku and allow for a successful build,  you will need to disable the static files from being returned. To do this you can use the following command in the terminal - 
 
-heroku config:set DISABLE_COLLECTSTATIC=1 --app <your heroku app name>
+    heroku config:set DISABLE_COLLECTSTATIC=1 --app <your heroku app name>
 
 Finally we can push everything to Heroku and this should initialise the build. To do this you can enter the following command in the terminal - 
 
-git push -u heroku 
+    git push -u heroku 
 
 If you have followed all of the above steps correctly Heroku should build your application. 
 
