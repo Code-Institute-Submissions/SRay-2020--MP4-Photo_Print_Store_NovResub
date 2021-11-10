@@ -1,14 +1,16 @@
 
 
-# Milestone project 4: Photo Print Store
+# Code Institute Milestone Project 4: Photo Print Store
 
-### Using: HTML, CSS, JavaScript, Python, Django, Flask, Bootstrap, PostgreSQL, Stripe
+### FullStack Django Application
 
-#### Purpose - This project will build a full-stack site based around business logic used to control a centrally-owned dataset. Including an authentication mechanism and the provision paid access to the site's data and/or other activities based on the dataset, such as the purchase of a product/service.
+**Built using: HTML, CSS, JavaScript, Python, Django, Flask, Bootstrap, PostgreSQL, Stripe**
+
+ Purpose - This project will build a full-stack site based around business logic used to control a centrally-owned dataset. Including an authentication mechanism and the provision paid access to the site's data and/or other activities based on the dataset, such as the purchase of a product/service.
 ---
 
-## Project Summary:
-### The goal of this project is to design and create a photography e-commerce and community web based application. This will be done using Python on the Django framework, written in HTML & Css and using JavaScript for further functionality. The main goal of the web app owner will be to provide a platform for customers to purchase framed photograph prints and frames using a secure payment service which allows user profiles to persist a shopping bag and return to checkout at a future time. There will also be a community blog component that will allow photographers, artists and other customers to share ideas and discuss featured pieces.
+### Project Summary:
+ The goal of this project is to design and create a photography e-commerce and community web based application. This will be done using Python on the Django framework, written in HTML & Css and using JavaScript for further functionality. The main goal of the web app owner will be to provide a platform for customers to purchase framed photograph prints and frames using a secure payment service which allows user profiles to persist a shopping bag and return to checkout at a future time. There will also be a community blog component that will allow photographers, artists and other customers to share ideas and discuss featured pieces.
 
 ### Link to Live Site - "https://mp4-amateur-aperture.herokuapp.com/"
 
@@ -42,8 +44,6 @@ A digital render of how the site would look on different devices and screen size
 * [**TESTING**](#testing)
 
 * [**BUG FIXES**](#bug-fixes)
-
-* [**IMPLEMENTATION ISSUES**](#implementation-issues)
 
 * [**DEPLOYMENT**](#deployment)
 
@@ -457,76 +457,98 @@ Though the sote was developed through Google Chrome, after it had been deployed 
 
 1. As a user I want a visually appealing and smooth website experience
 
--  
+-   The website is aesthetically pleasing across every page with strong product and background images.
+
 2. As a user I want to be given visual feedback about my actions 
 
-- 
+- The website utilises feedback through hover CSS functionality which gives colour change feedback on buttons across the site. 
+
 3. As a website user I want to be able to navigate the website easily and intuitively
 
-- 
+- There is a clear navigation bar which is present across the website and every page has a page title so the user is aware of where they currently are on the site. 
+
 4. As a user I want a consistent experience, that is the same every time I come back to the website and on any device
 
-- 
+- The application is stable on all text visits and through CSS media queries it is consistent across the four most common display sizes
+
+    (i). Large Desktop -1600 x 992 px
+    (ii). Laptop - 1280 x 802 px
+    (iii). Tablet -  768 x 1024 px
+    (iv). Mobile – 375 x 480 px
+
 5. As a user I want to reigister for a profile that is protected by a password
 
-- 
+- The site has a secure profile creation function which is password protected. 
+
 6. As a user I want to be able to login and logout of my account
 
-- 
+- There is a ‘Login’ and ‘Logout’ feature on the website which protects user information when they are logged out and is accessible when they are logged in.
+
 7. As a user I want to personalise my user account
 
-- 
+- When a user is successfully registered and logged in there is the ability to story the personal information (like delivery address and past order information) and this can be edited and personalised on the ‘Profile’ page any time the user is logged in.
+
 8. As a user I want to receive email confirmation to register my account
 
-- 
+- When a new user is registering for an account there is a feature which ensures they receive an email to verify that they are the person who registered on the website. 
 
 **Customer -**
 
 9. As a customer I want to view products for sale in distinct categories
 
-- 
+- The website has two distinct pages of products which are clearly divided into two categories (Prints and Frames). 
+
 10. As a customer I want to view the particular details of products
 
-- 
+- When you click on an item on the ‘Prints’ or ‘Frames’ pages the user is brought to a new page which displays the item in greater detail.
+
 11. As a customer I want to add products to a shopping bag before checking out
 
-- 
+- On the item details page outlined above there is an option for a customer to add those products to their bag for checkout.
+
 12. As a customer I want to change the quantity of the items I add to my bag
 
-- 
+- At the time of viewing an item the user is given the option to edit the quantity before adding it to their bag. Once the item is added to the bag the user is given another opportunity to change the quantity when they click the ‘Shopping Bag’ button, before they are brought to the ‘Checkout’ page.
+
 13. As a customer I want to checkout my bag of items in a safe and reputable environment
 
-- 
+- By using a third party checkout feature (the internationally renown, Stripe) customers are given confidence in the payment processor and that they are safe to enter their sensitive card details. 
+
 **Community  -** 
 
 14. As a community member I want to view blog posts
 
-- 
+- The ‘Blog’ section of the site givers users the ability to view the community forum which contains posts that have been published by the admin of the website. 
+
 15. As a community member I want to comment on blog posts 
 
-- 
+- There is a feature for users of the site (whether registered or not) to comment on all blog posts. These comments are moderated by the admin of the website so there is a level of oversight and standards for comments to be approved. This creates a safer and civil environment for community users.
+
 **Website Owner -**
 
 16. As the website owner I want to make money by offering goods to the users
 
-- 
+- The website allows the owner to sell items directly to customers online in a safe environment. 
+
 17. As the website owner I want the users to enjoy using my application
 
-- 
+- By using strong visual images across the site and by providing interesting content on the blog users should enjoy spending time on the website.
+
 18. As the website owner I want users to stay on my site for as long as possible
 
-- 
+- By offering a wide range of goods associated with a popular hobby and by giving users the ability to discuss ideas and participate in the conversation (via the Blog section) there is a good incentive for them to spend extended time on the website.
+
 19. As the website owner I want the users to return to my website
 
-- 
+- By having the ability to constantly update the saleable products and have interesting discussions on the blog page there is a good opportunity for return user visits to the website.
+
 20. As the website owner I want users to be able to trust the security and payment features that I have implemented
 
-- 
+- By using a third party payment processor, Stripe, the website owner is given a strong confidence in security and that the payment features will be safe and secure.   
+
 ### **BUG FIXES**
 
 Blog App issues - needed to supply direct link to page for django to recognise
-
-### **IMPLEMENTATION ISSUES**
 
 
 ### **DEPLOYMENT**
