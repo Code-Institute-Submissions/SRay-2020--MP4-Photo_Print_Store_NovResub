@@ -676,7 +676,150 @@ If you have followed all of the above steps correctly Heroku should build your a
 
 You can now go to the Heroku website and enable automatic deployments. I would not recommend this if you intend on making a lot of changes to the application as every time you push changes to Git, Heroku will build a new version of your application which can be resource intensive and slow down the development process. However, once the project is complete this is a good time to enable automatic deploys.
 
-### **CREDITS**
+#### **Amazon AWS -**
+
+Using Amazon AWS’s Simple Storage Service (S3) the static files and images for this project were hosted. The AWS IAM (Identity Access Management) was used for user verification and authorisation security.
+
+This was achieved by first creating a new account with Amazon AWS. 
+
+By following the on screen instructions the sign up process is very straight forward but this step does require the use of a credit card to verify the account. 
+
+
+**Amazon S3**
+Once you have created a personal account you can start a new project on the AWS dashboard. To do this you need to click in the ‘Find Services’ search bar and type in ‘S3’. You can then access this service from your dashboard.
+
+When you have done this you will have to ‘Create Bucket’ on the right hand side of the screen. 
+
+You will then be asked for some base settings so here it is recommended to 
+
+    • name the bucket the same or similar to your project, 
+    • set the region to the one nearest you, 
+    • uncheck the ‘Block all public access’ checkbox (to make your files publicly accessible)
+    • check the ‘I acknowledge public access’ box
+    • finally, click ‘Create bucket’ button at the bottom of the screen
+
+When you click into your new bucket you should be taken to the Bucket ‘Overview’ tab where you will see the bucket is empty. The first thing to do is to change some settings on the bucket for it to work correctly. To do this, navigate to the ‘Properties’ tab. 
+
+From the Properties tab you will 
+
+    • Click the ‘Static Website Hosting’ card and enable it by checking the ‘Use this bucket to host a website’ box
+    • Enter default values (index.html and error.html) for the index and error documents (these won’t be used)
+    • Click Save 
+      
+Next go to the Permissions tab and go top the fourth button ‘CORS configuration’ and enter the following code into the form - 
+
+        [
+        {
+            "AllowedHeaders": [
+                "Authorization"
+            ],
+            "AllowedMethods": [
+                "GET"
+            ],
+            "AllowedOrigins": [
+                "*"
+            ],
+            "ExposeHeaders": []
+        }
+        ]
+
+Then you will need to click the ‘Bucket Policy’ button and select the ‘Policy Generator’ at the bottom of the screen. This will be used to create a security policy for our bucket. 
+
+To do this 
+
+At Step 1 - 
+
+Select ‘S3 Bucket Policy’
+
+At Step 2 – 
+
+    • Effect should be set to ‘Allow’
+    • Principal should be set to all by using the ‘*’ character
+    • AWS Service should be set to ‘Amazon S3’
+    • Actions should be set to ‘Get Object’
+    • Amazon Resource Name (ARN) should be set to the code back at the top of ‘Bucket Policy’ tab (by copy and pasting it)
+    • Click Add Statement
+
+At Step 3 - 
+
+Click ‘Generate Policy’
+
+Then you should get a pop-up window which contains the Policy JSON Document. 
+
+Copy this policy  and go back to the tab with ‘Bucket Policy’ open and paste this into the empty form. 
+
+Before you click Save we need to allow access to all resources in this bucket. To do this you can add -
+
+    /*  
+
+onto the end of the resource key in the policy. 
+
+You can then click Save.
+
+Finally you will need to go into the ‘Access Control List’ tab in Permissions and allow Public Access. Do this by checking the box under Public Access --> Group to ‘Everyone’. Then there should be a popup and you can select ‘List Objects’ and the click Save.
+
+**Amazon IAM**
+
+Now you will need to set up a user to access the file storage we just set up in S3. To do this we will go back to the main ‘Services’ dashboard and search for ‘IAM’ and add this service. First we will need to create a new group. To do this - 
+
+    • Click on ‘Groups’ in the lefthand sidebar
+    • Click create New Group
+    • Set new group name
+    • Click past the policy sections (because we have nothing to attach yet)
+    • Then click ‘Create Group’
+
+Now we will need create a policy to add to our user. To do this 
+
+    • Click on ‘Policies’ on the lefthand sidebar
+    • Click ‘Create Policy’
+    • Click on the JSON tab 
+    • Then click ‘Import managed policy’ on the right hand side of the screen
+    • Search for ‘S3’ 
+    • Click on the policy titled‘ AmazonS3FullAccess’ and then select ‘import’
+
+
+ 
+Now you will need to open a new tab and go back to the ‘Permissions’ tab in S3 and get the ARN number that we used previously. When you have copied the ARN you will have to copy it into the ‘Resource’ section of the JSON file. Do this twice in a list ( by using [] ) separated by a comma and after the second time of pasting the ARN add a ‘ /* ‘ afterwards. The first item in our list here is the bucket itself and the second time (with the trailing * ) adds the files/folders in the bucket.
+
+Now all S3 actions should be allowed. 
+
+Next you will - 
+
+    • Click ‘Review Policy’ 
+    • Add name and description
+    • Click Create Policy
+
+
+Now back in ‘Groups’ on the sidebar 
+
+Click on the Group we created
+Click ‘Attach Policy’
+Search for the Policy we just created and select
+Click ‘Attach Policy’
+
+Finally we need to create a User to put in the Group. To do this 
+
+
+    • Click Users on sidebar
+    • Click Add User
+    • Create a new user with Programmatic access
+    • Select the Group we have created (with the policy we attached)
+    • Click through until the end (No more changes needed)
+    • Click ‘Create User’
+
+Now you will need to Download the .csv file and store it in a safe location. This file contains special user access key which we will need to connect the AWS services to Django. 
+
+**You can not re-access these keys, so keep them safe!**
+
+#### **Heroku Config Variables -**
+
+The last thing you will need to make sure is set up correctly for deployment to work is that you have entered all the right Configuration Variables (Config Vars) on Heroku. 
+Below is the list of all config vars you will need for this project. To AWS keys are in the .csv file we downloaded in the last stage.
+
+<img src="media/heroku_config_vars.png">
+
+
+### **CREDITS & REFERENCES**
 
 #### **General Elements -** 
 
