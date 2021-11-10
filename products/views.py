@@ -58,17 +58,6 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
-def product_detail_prints(request, product_id):
-
-    prints = Product.objects.filter(department="1")
-
-    context = {
-        'prints': prints,
-    }
-
-    return render(request, 'products/product_detail_prints.html', context)
-
-
 @login_required
 def add_product(request):
     if not request.user.is_superuser:
