@@ -1619,6 +1619,12 @@ margin-left: -2rem!important;
 
 /* Prints Page */
 
+.print-image-preview {
+    height: 6rem;
+    width: 11rem;
+    transform: translate( 14px, 8px);
+}
+
 
 /* Frames Page */
 
