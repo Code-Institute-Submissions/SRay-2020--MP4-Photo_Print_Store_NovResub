@@ -1,9 +1,9 @@
+""" This defines the models used for the Checkout app """
 import uuid
 
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
-from decimal import Decimal
 
 from django_countries.fields import CountryField
 
@@ -12,6 +12,7 @@ from profiles.models import UserProfile
 
 
 class Order(models.Model):
+    """ This defines the paramenters used for creating order instances """
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(
         UserProfile, on_delete=models.SET_NULL, null=True,
@@ -68,6 +69,7 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
+    """ Sets model parameters for order line information """
     order = models.ForeignKey(
         Order, null=False, blank=False, on_delete=models.CASCADE,
         related_name='lineitems')

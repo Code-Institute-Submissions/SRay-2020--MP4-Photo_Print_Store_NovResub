@@ -1,3 +1,4 @@
+""" This file contains the views used in the checkout app """
 import json
 from django.shortcuts import (
     render, redirect, reverse, get_object_or_404, HttpResponse)
@@ -20,6 +21,7 @@ from .models import Order, OrderLineItem
 
 @require_POST
 def cache_checkout_data(request):
+    """ On the POST request checkout data will be stored to cache """
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -36,6 +38,7 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
+    """ On POST success and all parameters met bag will checkout """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 

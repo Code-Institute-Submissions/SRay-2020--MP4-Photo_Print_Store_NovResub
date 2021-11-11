@@ -1,9 +1,12 @@
+""" This sets the form parameters for Checkout app"""
 from django import forms
 from .models import Order
 
 
 class OrderForm(forms.ModelForm):
+    """ A form which contains user information required for checkout """
     class Meta:
+        """ This class defines meta behaviour of above class """
         model = Order
         fields = ('full_name', 'email', 'phone_number',
                   'street_address1', 'street_address2',

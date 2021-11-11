@@ -1,3 +1,4 @@
+""" This file contains the classes needed to handle Stripe Webhooks """
 import json
 import time
 

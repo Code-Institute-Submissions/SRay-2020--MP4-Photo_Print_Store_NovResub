@@ -1,3 +1,4 @@
+""" This file contains the urls needed in the profile app """
 from django.urls import path
 from . import views
 

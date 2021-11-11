@@ -1,11 +1,14 @@
+""" This sets the form parameters for Profile app"""
 from django import forms
 from .widgets import CustomClearableFileInput
 from .models import Product, Department
 
 
 class ProductForm(forms.ModelForm):
+    """ A form which contains product information """
 
     class Meta:
+        """ This class defines meta behaviour of above class """
         model = Product
         fields = '__all__'
 

@@ -1,9 +1,12 @@
+""" This sets the form parameters for Profile app"""
 from django import forms
 from .models import UserProfile
 
 
 class UserProfileForm(forms.ModelForm):
+    """ A form which contains user profile information """
     class Meta:
+        """ This class defines meta behaviour of above class """
         model = UserProfile
         exclude = ('user',)
 

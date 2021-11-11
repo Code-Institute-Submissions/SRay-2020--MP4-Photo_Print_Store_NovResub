@@ -1,4 +1,4 @@
-""" This module... """
+""" This file contains the views used in the products app """
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -29,6 +29,7 @@ def all_products(request):
 
 
 def all_prints(request):
+    """ This returns all print objects """
     prints = Product.objects.filter(department="1")
 
     context = {
@@ -39,6 +40,7 @@ def all_prints(request):
 
 
 def all_frames(request):
+    """ This returns all frame objects """
     frames = Product.objects.filter(department="2")
 
     context = {
@@ -49,7 +51,7 @@ def all_frames(request):
 
 
 def product_detail(request, product_id):
-
+    """ This displays the details for each specific product """
     product = get_object_or_404(Product, pk=product_id)
 
     context = {
@@ -61,6 +63,7 @@ def product_detail(request, product_id):
 
 @login_required
 def add_product(request):
+    """ This allows an admin to add new products to the website """
     if not request.user.is_superuser:
         messages.error(request, 'This feature is for Admin only.')
         return redirect(reverse('home'))
@@ -89,6 +92,7 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
+    """ This allows an admin to edit products on the website """
 
     if not request.user.is_superuser:
         messages.error(request, 'This feature is for Admin only.')
@@ -119,7 +123,7 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-
+    """ This allows an admin to delete products on the website """
     if not request.user.is_superuser:
         messages.error(request, 'This feature is for Admin only.')
         return redirect(reverse('home'))

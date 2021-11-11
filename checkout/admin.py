@@ -1,13 +1,16 @@
+""" This defines the admin settings and their order for the checkout app"""
 from django.contrib import admin
 from .models import Order, OrderLineItem
 
 
 class OrderLineItemAdminInline(admin.TabularInline):
+    """ This class instantiates the order line items and total """
     model = OrderLineItem
     readonly_fields = ('lineitem_total',)
 
 
 class OrderAdmin(admin.ModelAdmin):
+    """ This class defines the values contained within the order forms """
     inlines = (OrderLineItemAdminInline,)
 
     readonly_fields = ('order_number', 'date',
