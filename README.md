@@ -267,13 +267,13 @@ AmIResponsive (website) - To ensure site is responsive and create mockup
 
 #### **Code validation tests:**
 
-**CSS -**
+**CSS:**
 
 The CSS code was passed through W3C CSS Validator (https://jigsaw.w3.org/css-validator/) and the final version contained no errors. It was also passed through AutoPrefixer Online to parse CSS and add vendor prefixes to ensure validity.
 
 <img src="media/mp4cssvalidator.png">
 
-**HTML -**
+**HTML:**
 
 The HTML code was passed through W3C HTML Validator (https://validator.w3.org/) to ensure final version contained no errors. 
 This was done by passing every seperate URL page of the application through the validator to make sure that there were no errors on any
@@ -281,13 +281,15 @@ of the individual pages. By passing the URL's the validator doesn't read the dja
 
 <img src="media/html_validator.png">
 
-**Python -**
+**Python:**
 
 The Python code was tested using -
 
     • Pylinter on Gitpod
     • Python Flake8 library
     • PEP8 online (http://pep8online.com/)
+
+**Pylinter & Flake8 -**
 
 The Pylinter on Gitpod and Flake8 continue to give me a number of errors (which do not appear on PEP8). 
 
@@ -307,18 +309,30 @@ They are the following -
 
 7. In profiles / models.py - Flake8 and the Pylinter both advise to 'Avoid using null=True on string-based fields' - These settings were taken over from the Boutique_Ado Project and I could not find another way to get the desired functionality affect that this setting provides. Until my knowledge improves and I can find a better way to do this I decided to leave the code as it is.
 
+**PEP8 -**
 
-All the code in this project has been tested against PEP8 standards and is compliant with one exception. One line of code in the settings is too long. 
-After extensive online research and consultation with my Mentor I am still not able to find a way to split this line of code over two lines 
+All the code in this project has been tested against PEP8 standards and is fully compliant.
+
+However there was one error that caused me some problems. After extensive online research and some help from another CI student on Slack I was able to find a way to write this code
 without it causing a syntax - end of line (EOL) error. The line is copied below - 
 
         'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
 
-I will continue to try and resolve this issue and update it if I find a solution in the future. 
+In it's place I replaced the whole 'AUTH_PASSWORD_VALIDATORS' section with the following to make it PEP8 compliant - 
 
-Every other line of code is PEP8 compliant.
+        AUTH_PASSWORD_VALIDATORS = [
+            {'NAME': 'django.contrib.auth.password_validation.%s' % validator}
+            for validator in [
+                'UserAttributeSimilarityValidator',
+                'MinimumLengthValidator',
+                'CommonPasswordValidator',
+                'NumericPasswordValidator',
+            ]
+        ]
 
-**JavaScript -**
+The code was taken from the following source - https://code.djangoproject.com/ticket/28163#no1
+
+**JavaScript:**
 
 The JavaScript was tested using JSHint to ensure no errors included in final version.
 
