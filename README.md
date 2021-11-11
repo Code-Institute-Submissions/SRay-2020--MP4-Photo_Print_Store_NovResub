@@ -299,15 +299,12 @@ They are the following -
 
 2. In checkout / apps.py - Flake8 states that 'checkout.signals' is imported but unused - This app is configured exactly as shown in the Django Full Stack Boutique_Ado project and from my research this is a necessary import for checkout to function correctly.
 
-3. In checkout / models.py - Flake8 and the Pylinter both advise to 'Avoid using null=True on string-based fields' - These settings were taken over from the Boutique_Ado Project and I could not find another way to get the desired functionality affect that this setting provides. Until my knowledge improves and I can find a better way to do this I decided to leave the code as it is.
+3. In checkout, products, profiles / models.py - Flake8 and the Pylinter both advise to 'Avoid using null=True on string-based fields' - These settings were taken over from the Boutique_Ado Project and I could not find another way to get the desired functionality effect that this setting provides. Until my knowledge improves and I can find a better way to do this I left the code as it is.
 
 4. In checkout / webhook_handler - Flake8 states that 'django.core.mail.send_mail', 'django.template.loader.render_to_string' and 'django.conf.settings' are all imported but unused - The webhook handler settings for this app are configured exactly as shown in the Django Full Stack: Boutique_Ado Project and from my research this is necessary for the webhook handler to function correctly.
 
-5. In products / models.py - Flake8 and the Pylinter both advise to 'Avoid using null=True on string-based fields' - These settings were taken over from the Boutique_Ado Project and I could not find another way to get the desired functionality affect that this setting provides. Until my knowledge improves and I can find a better way to do this I decided to leave the code as it is.
+5. In products / models.py - Flake8 and the Pylinter both advise that 'Model does not define __str__ method' - I have tried to replace this method but it causes errors with the models.
 
-6. In products / models.py - Flake8 and the Pylinter both advise that 'Model does not define __str__ method' - I have tried to replace this method but it causes errors with the models.
-
-7. In profiles / models.py - Flake8 and the Pylinter both advise to 'Avoid using null=True on string-based fields' - These settings were taken over from the Boutique_Ado Project and I could not find another way to get the desired functionality affect that this setting provides. Until my knowledge improves and I can find a better way to do this I decided to leave the code as it is.
 
 **PEP8 -**
 
