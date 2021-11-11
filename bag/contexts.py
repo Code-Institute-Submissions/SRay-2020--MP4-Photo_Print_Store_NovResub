@@ -1,3 +1,4 @@
+""" This outlines the contexts that will be used in the bag app """
 from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
@@ -5,7 +6,8 @@ from products.models import Product
 
 
 def bag_contents(request):
-
+    """ This defines what will be included in the
+        contents of the bag in this app """
     bag_items = []
     total = 0
     product_count = 0

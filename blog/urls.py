@@ -1,5 +1,7 @@
-from . import views
+""" This file contains the urls used in the Blog app """
 from django.urls import path
+from . import views
+
 
 urlpatterns = [
     path("", views.PostList.as_view(), name="blog"),

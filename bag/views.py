@@ -1,3 +1,4 @@
+""" This file contains the views displayed in the Bag app """
 from django.shortcuts import (
     render, redirect, reverse, HttpResponse, get_object_or_404)
 from django.contrib import messages
@@ -8,12 +9,13 @@ from products.models import Product
 # Create your views here.
 
 def view_bag(request):
-
+    """ Renders the user a view of current item bag """
     return render(request, 'bag/bag.html')
 
 
 def add_to_bag(request, item_id):
-
+    """ This returns to the user the options of
+        adding items to their bag """
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
@@ -33,7 +35,8 @@ def add_to_bag(request, item_id):
 
 
 def adjust_bag(request, item_id):
-
+    """ This returns to the user the options of
+        editing exisitng items in their bag """
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
 
