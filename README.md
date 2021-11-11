@@ -293,7 +293,7 @@ The Pylinter on Gitpod and Flake8 continue to give me a number of errors (which 
 
 They are the following - 
 
-1. In amater_aperture / settings.py - The two issues are 'env' imported but unused and Unable to import 'env' - after research on the slack channel and online and from a discussion with my Mentor I believe that these should be ignored as although I am not using the 'env' in this instance it is necessary for local deployment.
+1. In amateur_aperture / settings.py - The two issues are 'env' imported but unused and Unable to import 'env' - after research on the slack channel and online and from a discussion with my Mentor I believe that these should be ignored as although I am not using the 'env' in this instance it is necessary for local deployment.
 
 2. In checkout / apps.py - Flake8 states that 'checkout.signals' is imported but unused - This app is configured exactly as shown in the Django Full Stack Boutique_Ado project and from my research this is a necessary import for checkout to function correctly.
 
