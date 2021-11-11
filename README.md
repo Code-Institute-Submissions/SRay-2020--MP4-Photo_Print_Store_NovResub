@@ -279,6 +279,8 @@ The HTML code was passed through W3C HTML Validator (https://validator.w3.org/) 
 This was done by passing every seperate URL page of the application through the validator to make sure that there were no errors on any
 of the individual pages. By passing the URL's the validator doesn't read the django/flask and can validate accurately.
 
+<img src="media/html_validator.png">
+
 **Python -**
 
 The Python code was tested using -
