@@ -265,17 +265,60 @@ AmIResponsive (website) - To ensure site is responsive and create mockup
 
 ### **TESTING**
 
-#### **Code tests -**
+#### **Code validation tests:**
 
-The CSS code was passed through W3C CSS Validator and final version contained no errors. It was also passed through AutoPrefixer Online to parse CSS and add vendor prefixes to ensure validity.
+**CSS -**
+
+The CSS code was passed through W3C CSS Validator (https://jigsaw.w3.org/css-validator/) and the final version contained no errors. It was also passed through AutoPrefixer Online to parse CSS and add vendor prefixes to ensure validity.
 
 <img src="media/mp4cssvalidator.png">
 
-The HTML code was passed through W3C HTML Validator and FreeFormatter.com to ensure final version contained no errors.
+**HTML -**
 
-The JavaScript was tested using JSHint to ensure no errors included in final version. 
+The HTML code was passed through W3C HTML Validator (https://validator.w3.org/) to ensure final version contained no errors. 
+This was done by passing every seperate URL page of the application through the validator to make sure that there were no errors on any
+of the individual pages. By passing the URL's the validator doesn't read the django/flask and can validate accurately.
 
-The Python code was tested using 'Python Tutor' and 'Extends Class - Python Syntax Checker'
+**Python -**
+
+The Python code was tested using -
+
+    • Pylinter on Gitpod
+    • Python Flake8 library
+    • PEP8 online (http://pep8online.com/)
+
+The Pylinter on Gitpod and Flake8 continue to give me a number of errors (which do not appear on PEP8). 
+
+They are the following - 
+
+1. In amater_aperture / settings.py - The two issues are 'env' imported but unused and Unable to import 'env' - after research on the slack channel and online and from a discussion with my Mentor I believe that these should be ignored as although I am not using the 'env' in this instance it is necessary for local deployment.
+
+2. In checkout / apps.py - Flake8 states that 'checkout.signals' is imported but unused - This app is configured exactly as shown in the Django Full Stack Boutique_Ado project and from my research this is a necessary import for checkout to function correctly.
+
+3. In checkout / models.py - Flake8 and the Pylinter both advise to 'Avoid using null=True on string-based fields' - These settings were taken over from the Boutique_Ado Project and I could not find another way to get the desired functionality affect that this setting provides. Until my knowledge improves and I can find a better way to do this I decided to leave the code as it is.
+
+4. In checkout / webhook_handler - Flake8 states that 'django.core.mail.send_mail', 'django.template.loader.render_to_string' and 'django.conf.settings' are all imported but unused - The webhook handler settings for this app are configured exactly as shown in the Django Full Stack: Boutique_Ado Project and from my research this is necessary for the webhook handler to function correctly.
+
+5. In products / models.py - Flake8 and the Pylinter both advise to 'Avoid using null=True on string-based fields' - These settings were taken over from the Boutique_Ado Project and I could not find another way to get the desired functionality affect that this setting provides. Until my knowledge improves and I can find a better way to do this I decided to leave the code as it is.
+
+6. In products / models.py - Flake8 and the Pylinter both advise that 'Model does not define __str__ method' - I have tried to replace this method but it causes errors with the models.
+
+7. In profiles / models.py - Flake8 and the Pylinter both advise to 'Avoid using null=True on string-based fields' - These settings were taken over from the Boutique_Ado Project and I could not find another way to get the desired functionality affect that this setting provides. Until my knowledge improves and I can find a better way to do this I decided to leave the code as it is.
+
+
+All the code in this project has been tested against PEP8 standards and is compliant with one exception. One line of code in the settings is too long. 
+After extensive online research and consultation with my Mentor I am still not able to find a way to split this line of code over two lines 
+without it causing a syntax - end of line (EOL) error. The line is copied below - 
+
+        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+
+I will continue to try and resolve this issue and update it if I find a solution in the future. 
+
+Every other line of code is PEP8 compliant.
+
+**JavaScript -**
+
+The JavaScript was tested using JSHint to ensure no errors included in final version.
 
 #### **Dev tests -**
 
