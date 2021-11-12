@@ -523,6 +523,10 @@ padding-left: 2rem;
     margin-left: 0rem;
 }
 
+.blog-post-style {
+    white-space: pre-wrap;
+}
+
 /* Shopping Bag */
 
 .light-overlay {
