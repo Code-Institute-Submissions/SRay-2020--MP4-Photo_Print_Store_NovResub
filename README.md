@@ -277,9 +277,41 @@ The CSS code was passed through W3C CSS Validator (https://jigsaw.w3.org/css-val
 
 The HTML code was passed through W3C HTML Validator (https://validator.w3.org/) to ensure final version contained no errors. 
 This was done by passing every seperate URL page of the application through the validator to make sure that there were no errors on any
-of the individual pages. By passing the URL's the validator doesn't read the django/flask and can validate accurately.
+of the individual pages.
 
 <img src="media/html_validator.png">
+
+The following links were successfully passed through the validator -
+
+    • https://mp4-amateur-aperture.herokuapp.com/
+    • https://mp4-amateur-aperture.herokuapp.com/products/prints/
+    • https://mp4-amateur-aperture.herokuapp.com/products/10/
+    • https://mp4-amateur-aperture.herokuapp.com/products/11/
+    • https://mp4-amateur-aperture.herokuapp.com/products/12/
+    • https://mp4-amateur-aperture.herokuapp.com/products/frames/
+    • https://mp4-amateur-aperture.herokuapp.com/products/6/
+    • https://mp4-amateur-aperture.herokuapp.com/products/7/
+    • https://mp4-amateur-aperture.herokuapp.com/products/8/
+    • https://mp4-amateur-aperture.herokuapp.com/products/9/
+    • https://mp4-amateur-aperture.herokuapp.com/products/1/
+    • https://mp4-amateur-aperture.herokuapp.com/products/2/
+    • https://mp4-amateur-aperture.herokuapp.com/products/3/
+    • https://mp4-amateur-aperture.herokuapp.com/products/4/
+    • https://mp4-amateur-aperture.herokuapp.com/products/5/
+    • https://mp4-amateur-aperture.herokuapp.com/blog/
+    • https://mp4-amateur-aperture.herokuapp.com/blog/entry_3/
+    • https://mp4-amateur-aperture.herokuapp.com/blog/entry_2/
+    • https://mp4-amateur-aperture.herokuapp.com/blog/new_blog/
+    • https://mp4-amateur-aperture.herokuapp.com/accounts/signup/
+    • https://mp4-amateur-aperture.herokuapp.com/accounts/login/
+    • https://mp4-amateur-aperture.herokuapp.com/profile/
+    • https://mp4-amateur-aperture.herokuapp.com/bag/
+    • https://mp4-amateur-aperture.herokuapp.com/accounts/logout/
+
+The following pages would not pass through validation because the checker can’t retrieve the resource (instance of session not available)
+
+    • https://mp4-amateur-aperture.herokuapp.com/checkout/
+    • https://mp4-amateur-aperture.herokuapp.com/checkout/checkout_success/
 
 **Python:**
 
