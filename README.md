@@ -335,11 +335,11 @@ The JavaScript was tested using JSHint to ensure no errors included in final ver
 
 #### **Dev tests -**
 
-(i)Chrome Developer Tools -
+(i) Chrome Developer Tools -
 
 Chrome Developer Tools were used throughout this project and were greatly relied on to make all manner of adjustments and changes to project.
 
-(ii)Chrome Lighthouse -
+(ii) Chrome Lighthouse -
 
 
 <img src="media/mp4googlelighthouse.png">
@@ -369,8 +369,7 @@ These changes included -
     • Add meta description to project
     • Improve crawlability of href attribute of anchor elements links
 
-
-#### **Function tests -**
+#### **Manual Testing -**
 
 This site was tested many times manually throughout the development process by the author and friends and family to ensure that it's functions behave exactly as they are intended to. 
 This process was again repeated when hosted to ensure that there were no changes to functionality. 
